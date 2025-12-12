@@ -18,6 +18,7 @@ body {
   background-color: var(--background-gray);
 }
 
+/* Header visibile solo su desktop */
 header {
   position: sticky;
   top: 0;
@@ -26,12 +27,27 @@ header {
   z-index: 10;
 }
 
+/* Footer visibile solo su mobile */
 footer {
   position: sticky;
   bottom: 0;
   background: var(--purple);
   padding: 15px;
   z-index: 10;
+}
+
+/* Su schermi piccoli (mobile): nascondi header, mostra footer */
+@media (max-width: 768px) {
+  header {
+    display: none;
+  }
+}
+
+/* Su schermi grandi (desktop): nascondi footer, mostra header */
+@media (min-width: 769px) {
+  footer {
+    display: none;
+  }
 }
 
 main {
