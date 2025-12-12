@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/main.css">
+    <title>Blood on the Clocktower</title>
+    <link rel="icon" type="image/png" href="./other/fav-icon.png">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a class="nav__link" href="#trouble-brewing">Trouble Brewing</a>
+            <a class="nav__link" href="#bad-moon-rising">Bad Moon Rising</a>
+            <a class="nav__link" href="#sects-violets">Sects & Violets</a>
+            <a class="nav__link" href="#experimental">Experimental</a>
+            <a class="nav__link" href="#travellers">Travellers</a>
+            <a class="nav__link" href="#fabled">Fabled</a>
+        </div>
+    </header>
+    <div id="modal" class="modal js_modal">
+        <div class="modal__content">
+            <span class="modal__close js_modal-close">&times;</span>
+            <div class="modal__img-flavor-container">
+                <img class="token js_token" src="" loading="lazy" alt="">
+                <div class="modal__speech-bubble">
+                    <p class="modal__flavor js_flavor"></p>
+                </div>
+            </div>
+            <div class="modal__info-container">
+                <h2 class="modal__title modal__title--name js_modal-name"></h2>
+                <p class="modal__ability js_modal-ability"></p>
+            </div>
+            <div class="modal__info-container">
+                <div class="modal__overview js_modal-overview"></div>
+            </div>
+            <div class="modal__examples-run-container">
+                <div class="modal__examples-run-item">
+                    <h3 class="modal__title">Examples</h3>
+                    <div class="modal__examples js_examples"></div>
+                </div>
+                <div class="modal__examples-run-item">
+                    <h3 class="modal__title">How to Run</h3>
+                    <div class="modal__how-to-run js_how-to-run"></div>
+                </div>
+            </div>
+            <div class="modal__jinx-container js_jinx-container">
+                    <h3>
+                        <a class="link" href="https://wiki.bloodontheclocktower.com/Djinn" target="_blank">See All Jinxes (Opens in New Tab)</a>
+                    </h3>
+                    <div class="modal__jinxes js_jinxes"></div>
+            </div>
+        </div>
+    </div>
+    <div class="intro">
+        <h1 class="intro__title">One Page Blood on the Clocktower Almanac</h1>
+        <p class="intro__text">Scroll below or choose a script above. Click on a token to learn how the character works and how to run them.</p>
+        <p class="intro__text intro__text--bold">This is a fan-made website and has no affiliation with The Pandemonium Institute. <a class="link" href="https://bloodontheclocktower.com/">Check out their website!</a></p>
+        <p></p>
+    </div>
+    <main>
+        <div class="all">
+            <div class="script">
+                <h2 class="script__title script__title--tb" id="trouble-brewing">Trouble Brewing</h2>
+                <h3 class="script__character-type script__character-type--good">Townsfolk</h3>
+                <div class="script__characters-container script__characters-container--good js_tb-townsfolk"></div>
+                <h3 class="script__character-type script__character-type--good">Outsiders</h3>
+                <div class="script__characters-container script__characters-container--good js_tb-outsiders"></div>
+                <h3 class="script__character-type script__character-type--evil">Minions</h3>
+                <div class="script__characters-container script__characters-container--evil js_tb-minions"></div>
+                <h3 class="script__character-type script__character-type--evil">Demons</h3>
+                <div class="script__characters-container script__characters-container--evil js_tb-demons"></div>
+            </div>
+            <div class="script">
+                <h1 class="script__title script__title--bmr" id="bad-moon-rising">Bad Moon Rising</h1>
+                <h2 class="script__character-type script__character-type--good">Townsfolk</h2>
+                <div class="script__characters-container script__characters-container--good js_bmr-townsfolk"></div>
+                <h2 class="script__character-type script__character-type--good">Outsiders</h2>
+                <div class="script__characters-container script__characters-container--good js_bmr-outsiders"></div>
+                <h2 class="script__character-type script__character-type--evil">Minions</h2>
+                <div class="script__characters-container script__characters-container--evil js_bmr-minions"></div>
+                <h2 class="script__character-type script__character-type--evil">Demons</h2>
+                <div class=" script__characters-container script__characters-container--evil js_bmr-demons"></div>
+            </div>
+            <div class="script">
+                <h1 class="script__title script__title--sv" id="sects-violets">Sects & Violets</h1>
+                <h2 class="script__character-type script__character-type--good">Townsfolk</h2>
+                <div class="script__characters-container script__characters-container--good js_sv-townsfolk"></div>
+                <h2 class="script__character-type script__character-type--good">Outsiders</h2>
+                <div class="script__characters-container script__characters-container--good js_sv-outsiders"></div>
+                <h2 class="script__character-type script__character-type--evil">Minions</h2>
+                <div class="script__characters-container script__characters-container--evil js_sv-minions"></div>
+                <h2 class="script__character-type script__character-type--evil">Demons</h2>
+                <div class="script__characters-container script__characters-container--evil js_sv-demons"></div>
+            </div>
+            <div class="script">
+                <h1 class="script__title script__title--experimental script__title--other" id="experimental">Experimental Characters*</h1>
+                <p class="script__subtext">*Please note that experimental characters are not finalized, and any information here may be subject to change.</p>
+                <h2 class="script__character-type script__character-type--good">Townsfolk</h2>
+                <div class="script__characters-container script__characters-container--good js_exp-townsfolk"></div>
+                <h2 class="script__character-type script__character-type--good">Outsiders</h2>
+                <div class="script__characters-container script__characters-container--good js_exp-outsiders"></div>
+                <h2 class="script__character-type script__character-type--evil">Minions</h2>
+                <div class="script__characters-container script__characters-container--evil js_exp-minions"></div>
+                <h2 class="script__character-type script__character-type--evil">Demons</h2>
+                <div class="script__characters-container script__characters-container--evil js_exp-demons"></div>
+            </div>
+            <div class="script">
+                <h1 class="script__title script__title--other" id="travellers">Travellers</h1>
+                <h2 class="script__character-type script__character-type--tb">Trouble Brewing</h2>
+                <div class="script__characters-container script__characters-container--tb js_trav-tb"></div>
+                <h2 class="script__character-type script__character-type--bmr">Bad Moon Rising</h2>
+                <div class="script__characters-container script__characters-container--bmr js_trav-bmr"></div>
+                <h2 class="script__character-type script__character-type--sv">Sects & Violets</h2>
+                <div class="script__characters-container script__characters-container--sv js_trav-sv"></div>
+                <h2 class="script__character-type script__character-type--other">Experimental</h2>
+                <div class="script__characters-container script__characters-container--other js_trav-exp"></div>
+            </div>
+            <div class="script">
+                <h1 class="script__title script__title--other" id="fabled">Fabled</h1>
+                <h2 class="script__character-type script__character-type--other">All</h2>
+                <div class="script__characters-container script__characters-container--other js_fabled-all"></div>
+            </div>
+        </div>
+    </main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
