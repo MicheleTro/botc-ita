@@ -2625,6 +2625,8 @@ function populateAll() {
         if (character.script == "tb") {
             populateTB(name, originalName, group);
         }
+        
+        /*
         if (character.script == "bmr") {
             populatedBMR(name, originalName, group);
         }
@@ -2634,6 +2636,7 @@ function populateAll() {
         if (character.script == "exp") {
             populateEXP(name, originalName, group);
         }
+        */
         if (character.group == "Traveller") {
             populateTraveller(name, originalName, script);
         }
@@ -2641,6 +2644,16 @@ function populateAll() {
             populateFabled(name, originalName);
         }
     })
+
+    characters.sort((a, b) => a.name.localeCompare(b.name));
+    characters.forEach(character => {
+        let originalName = character.name;
+        let name = getName(originalName);
+        let group = character.group;
+        let script = character.script;
+        populateRest(name, originalName, group);
+    })
+
 }
 
 function getName(originalName, name) {
@@ -2665,6 +2678,18 @@ function populateTB(name, originalName, group) {
         $(".js_tb-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`)
     } else if (group == "Demon") {
         $(".js_tb-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
+    }
+}
+
+function populateRest(name, originalName, group) {
+    if (group == "Townsfolk") {
+        $(".js_all-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
+    } else if (group == "Outsider") {
+        $(".js_all-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
+    } else if (group == "Minion") {
+        $(".js_all-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`)
+    } else if (group == "Demon") {
+        $(".js_all-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
     }
 }
 
