@@ -205,6 +205,15 @@ h3 {
   }
 }
 
+.intro__loader-url {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 2px solid var(--good-blue);
+  background-color: var(--modal-background);
+  font-size: 16px;
+  min-width: 320px;
+}
+
 
 /* SCRIPT BLOCK START */
 .script__title {

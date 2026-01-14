@@ -2853,6 +2853,9 @@ async function setupDynamicScripts() {
 
     // 3) bottone Load
     $("#loadScriptBtn").on("click", onLoadScriptClicked);
+
+    $("#loadScriptUrlBtn").on("click", onLoadScriptUrlClicked);
+
 }
 
 function bindTokenClicksDelegated() {
@@ -2953,6 +2956,76 @@ async function onLoadScriptClicked() {
         $("#trouble-brewing").text(meta.name);
     }
 }
+
+async function onLoadScriptUrlClicked() {
+  const url = $("#scriptUrlInput").val().trim();
+  if (!url) return;
+
+  let scriptId;
+  try {
+    scriptId = extractBotcScriptId(url);
+  } catch (e) {
+    console.error(e);
+    alert("URL non valido. Esempio valido: https://www.botcscripts.com/api/scripts/83/json/");
+    return;
+  }
+
+  let data;
+  try {
+    data = await fetchJson(url);
+  } catch (e) {
+    console.error("Errore fetch (probabile CORS o URL errato):", e);
+    alert("Impossibile caricare questo URL (probabile CORS o link errato).");
+    return;
+  }
+
+  // Formato botcscripts: array di oggetti { id: "balloonist" }
+  if (!Array.isArray(data)) {
+    alert("JSON non valido: mi aspettavo un array.");
+    return;
+  }
+
+  const roleIds = data
+    .map(x => (x && typeof x === "object") ? x.id : null)
+    .filter(id => typeof id === "string" && id.length > 0);
+
+  if (roleIds.length === 0) {
+    alert("JSON non valido: nessun campo 'id' trovato.");
+    return;
+  }
+
+  // Nome: il numero nello URL
+  applyScriptToTB(`Script ${scriptId}`, roleIds);
+}
+
+function extractBotcScriptId(url) {
+  // accetta sia con che senza slash finale
+  const m = url.match(/\/api\/scripts\/(\d+)\/json\/?$/i);
+  if (!m) throw new Error("URL non compatibile con botcscripts api/scripts/{id}/json");
+  return m[1];
+}
+
+function applyScriptToTB(scriptName, roleIds) {
+  const characterIndex = buildCharacterIndex();
+
+  // svuota TB
+  $(".js_tb-townsfolk, .js_tb-outsiders, .js_tb-minions, .js_tb-demons").empty();
+
+  // ripopola TB come fai già per i file locali :contentReference[oaicite:6]{index=6}
+  roleIds.forEach(id => {
+    const character = characterIndex.get(id);
+    if (!character) {
+      console.warn("ID ruolo non trovato in characters:", id);
+      return;
+    }
+    const originalName = character.name;
+    const name = getName(originalName);
+    populateTB(name, originalName, character.group);
+  });
+
+  $("#trouble-brewing").text(scriptName);
+}
+
 
 async function fetchJson(url) {
     const res = await fetch(url, { cache: "no-cache" });
