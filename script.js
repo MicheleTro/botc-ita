@@ -1,6 +1,7 @@
 let characters = [
     {
         name: "Washerwoman",
+        id:"washerwoman",	
         description: "La Washerwoman scopre che uno specifico personaggio Townsfolk è in gioco, ma non chi lo sta interpretando.",
         intro: "<ul><li>Durante la prima notte, la Washerwoman viene svegliata, le vengono mostrati due giocatori e apprende il personaggio di uno di essi.</li><li>Apprende questa informazione una sola volta e poi non apprende più nulla.</li></ul>",
         ability: "Inizi sapendo che 1 di 2 giocatori è un particolare Townsfolk.",
@@ -12,6 +13,7 @@ let characters = [
     },
     {
         name: "Librarian",
+        id:"librarian",	
         description: "Il Librarian apprende che un particolare personaggio Outsider è in gioco, ma non chi lo sta interpretando.",
         intro: "<ul><li>Durante la prima notte, il Librarian apprende che uno di due giocatori è uno specifico Outsider.</li><li>Apprende questa informazione una sola volta e poi non apprende più nulla.</li><li>Il Drunk è un Outsider. Se il Librarian apprende che uno di due giocatori è il Drunk, non apprende il Townsfolk che il giocatore del Drunk crede di essere.</li></ul>",
         ability: "Inizi sapendo che 1 di 2 giocatori è un particolare Outsider. (Oppure che zero sono in gioco.)",
@@ -23,6 +25,7 @@ let characters = [
     },
     {
         name: "Investigator",
+        id:"investigator",	
         description: "L'Investigator apprende che un particolare personaggio Minion è in gioco, ma non chi lo sta interpretando.",
         intro: "<ul><li>Durante la prima notte, l'Investigator apprende che uno di due giocatori è uno specifico Minion.</li><li>Apprende questa informazione una sola volta e poi non apprende più nulla.</li></ul>",
         ability: "Inizi sapendo che 1 di 2 giocatori è un particolare Minion.",
@@ -34,6 +37,7 @@ let characters = [
     },
     {
         name: "Chef",
+        id:"chef",	
         description: "Lo Chef sa se i giocatori evil sono seduti uno accanto all’altro.",
         intro: "<ul><li>Nella prima notte, lo Chef apprende esattamente quante coppie di giocatori malvagi ci sono in totale. Una coppia è composta da due giocatori, ma un giocatore può far parte di due coppie. Quindi, due giocatori seduti uno accanto all’altro sono una coppia. Tre giocatori seduti uno accanto all’altro sono due coppie. Quattro giocatori seduti uno accanto all’altro sono tre coppie. E così via.</li><li>Lo Chef rileva i Traveller malvagi come gli altri tipi di personaggio, ma solo se quei Traveller sono entrati in gioco prima che lo Chef agisca.</li></ul>",
         ability: "Inizi sapendo quante coppie di giocatori malvagi ci sono sedute vicino tra loro.",
@@ -45,6 +49,7 @@ let characters = [
     },
     {
         name: "Empath",
+        id:"empath",	
         description: "L'Empath continua ad apprendere se i suoi vicini vivi sono buoni o malvagi.",
         intro: "<ul><li>L'Empath apprende solo quanti dei suoi vicini sono malvagi, non <i>quale</i> lo sia.</li><li>L'Empath non rileva i giocatori morti. Quindi, se l'Empath è seduto accanto a un giocatore morto, non ottiene informazioni su quel giocatore morto. Al suo posto, ottiene informazioni sul giocatore vivo più vicino in quella direzione.</li><li>L'Empath agisce dopo il Demon, quindi se il Demon uccide uno dei vicini vivi dell'Empath, l'Empath non apprende informazioni sul giocatore appena morto. Le informazioni dell'Empath sono accurate all'alba, non al tramonto.</li></ul>",
         ability: "Ogni notte, apprendi quanti dei tuoi 2 vicini vivi sono malvagi.",
@@ -56,6 +61,7 @@ let characters = [
     },
 {
         name: "Fortune Teller",
+        id:"fortuneteller",	
         description: "La Fortune Teller può individuare chi è il Demon, ma a volte crede che giocatori buoni siano Demon.",
         intro: "<ul><li>Ogni notte, la Fortune Teller sceglie due giocatori e apprende se almeno uno di essi è un Demon. Non apprende quale dei due sia il Demon, solo che uno dei due lo è. Se nessuno dei due è il Demon, lo scopre.</li><li>Sfortunatamente, un giocatore, chiamato Red Herring, verrà registrato come un Demon dalla Fortune Teller se viene scelto. Il Red Herring è lo stesso giocatore per tutta la durata della partita. Questo giocatore può essere qualsiasi giocatore buono, anche la Fortune Teller stessa, e la Fortune Teller non sa quale giocatore sia.</li><li>La Fortune Teller può scegliere qualsiasi due giocatori — vivi o morti, o anche se stessa. Se sceglie un Demon morto, la Fortune Teller riceve comunque un cenno affermativo.</li>",
         ability: "Ogni notte, scegli 2 giocatori: apprendi se uno dei due è un Demon. C’è un giocatore buono che per te risulta essere un Demon.",
@@ -67,6 +73,7 @@ let characters = [
     },
     {
         name: "Undertaker",
+        id:"undertaker",	
         description: "L'Undertaker apprende quale personaggio è stato giustiziato oggi.",
         intro: "<ul><li>Il giocatore deve essere morto per esecuzione affinché l'Undertaker apprenda chi era. Le morti durante il giorno per altri motivi, come quando il Gunslinger sceglie un giocatore da uccidere o l’esilio di un Traveller, non contano.</li><li>L'Undertaker si sveglia ogni notte tranne la prima, poiché non ci sono ancora state esecuzioni.</li><li>Se oggi non è morto nessuno, l'Undertaker non apprende nulla. Lo Storyteller o non sveglia l'Undertaker durante la notte, oppure lo sveglia ma non mostra alcun token.</li><li>Se il Drunk viene giustiziato, all'Undertaker viene mostrato il token personaggio del Drunk, non il token del Townsfolk che il giocatore del Drunk credeva di essere.</li></ul>",
         ability: "Ogni notte*, apprendi quale personaggio è morto oggi per esecuzione.",
@@ -78,6 +85,7 @@ let characters = [
     },
     {
         name: "Monk",
+        id:"monk",	
         description: "Il Monk protegge gli altri dal Demon.",
         intro: "<ul><li>Ogni notte tranne la prima, il Monk può scegliere di proteggere qualsiasi giocatore tranne se stesso.</li><li>Se il Demon attacca un giocatore che è stato protetto dal Monk, quel giocatore non muore. Il Demon non può attaccare un altro giocatore — semplicemente, questa notte non c’è alcuna morte.</li><li>Il Monk non protegge dal fatto che il Demon nomini ed esegua qualcuno.</li></ul>",
         ability: "Ogni notte*, scegli un giocatore (non te stesso): è al sicuro dal Demon stanotte.",
@@ -89,6 +97,7 @@ let characters = [
     },
     {
         name: "Ravenkeeper",
+        id:"ravenkeeper",	
         description: "Il Ravenkeeper apprende il personaggio di qualsiasi giocatore, ma solo se il Ravenkeeper muore di notte.",
         intro: "<ul><li>Il Ravenkeeper viene svegliato nella notte in cui muore e sceglie immediatamente un giocatore.</li><li>Il Ravenkeeper può scegliere un giocatore morto, se lo desidera.</li></ul>",
         ability: "Se muori di notte, vieni svegliato per scegliere un giocatore: apprendi il suo personaggio.",
@@ -100,6 +109,7 @@ let characters = [
     },
     {
         name: "Virgin",
+        id:"virgin",	
         description: "La Virgin è al sicuro dall’esecuzione… forse. I giocatori che nominano la Virgin di solito muoiono.",
         intro: "<ul><li>Se un Townsfolk nomina la Virgin, quel Townsfolk viene immediatamente giustiziato. Poiché può esserci una sola esecuzione al giorno, il processo di nomina termina immediatamente, anche se un giocatore stava per morire.</li><li>Solo i Townsfolk vengono giustiziati a causa dell’abilità della Virgin. Se un Outsider, un Minion o un Demon nomina la Virgin, non succede nulla e la votazione continua.</li><li>L’abilità della Virgin è potente perché, se un Townsfolk la nomina e muore, allora entrambi i personaggi sono quasi certamente Townsfolk.</li><li>Dopo essere stata nominata per la prima volta, la Virgin perde la sua abilità, anche se il nominatore non è morto, e anche se la Virgin era avvelenata o drunk.</li></ul>",
         ability: "La prima volta che vieni nominata, se il nominatore è un Townsfolk, viene immediatamente giustiziato.",
@@ -111,6 +121,7 @@ let characters = [
     },
     {
         name: "Slayer",
+        id:"slayer",	
         description: "Lo Slayer può uccidere il Demon indovinando chi è.",
         intro: "<ul><li>Lo Slayer può scegliere di usare la propria abilità in qualsiasi momento durante il giorno e deve dichiararlo pubblicamente. Se lo Slayer sceglie il Demon, il Demon muore immediatamente. Altrimenti, non succede nulla.</li><li>I giocatori non apprendono l’identità del giocatore morto. Dopotutto, potrebbe essere stata la Recluse!</li><li>Uno Slayer che usa la propria abilità mentre è avvelenato o drunk non può usarla di nuovo.</li><li>Lo Slayer vorrà scegliere un giocatore vivo. Anche se lo Slayer sceglie un Imp morto, non succede nulla, perché un giocatore morto non può morire di nuovo.</li><li>I giocatori possono dire qualsiasi cosa in qualsiasi momento, quindi un giocatore che finge di essere lo Slayer può fingere di usare l’abilità dello Slayer.</li></ul>",
         ability: "Una volta per partita, durante il giorno, scegli pubblicamente un giocatore: se è il Demon, muore.",
@@ -122,6 +133,7 @@ let characters = [
     },
 {
         name: "Soldier",
+        id:"soldier",	
         description: "Il Soldier non può essere ucciso dal Demon.",
         intro: "<ul><li>Il Soldier non può morire a causa dell’abilità del Demon. Quindi, se l’Imp attacca il Soldier di notte, non succede nulla. Nessuno muore. L’Imp non può scegliere un altro giocatore da attaccare al suo posto.</li><li>Il Soldier può comunque morire per esecuzione, anche se il nominatore era il Demon. Il Soldier è protetto dall’abilità del Demon di uccidere, non dalle azioni del giocatore Demon.</li></ul>",
         ability: "Sei al sicuro dal Demon.",
@@ -133,6 +145,7 @@ let characters = [
     },
 {
         name: "Mayor",
+        id:"mayor",	
         description: "Il Mayor può vincere con mezzi pacifici nell’ultimo giorno.",
         intro: "<ul><li>Per sopravvivere, il Mayor a volte fa \"accidentalmente\" uccidere qualcun altro. Se il Mayor viene attaccato e dovrebbe morire, lo Storyteller può scegliere che muoia un altro giocatore. Nessuno apprende come è morto durante la notte, solo che è morto.</li><li>Se alla fine del giorno rimangono esattamente tre giocatori vivi e quel giorno non è avvenuta alcuna esecuzione, la partita termina e i buoni vincono.</li><li>I Traveller contano come giocatori per la vittoria del Mayor, quindi devono essere prima esiliati. Ricorda che gli esili non sono esecuzioni.</li><li>I Fabled non contano come giocatori per la vittoria del Mayor, poiché lo Storyteller non è un giocatore.</li><li>Se il Demon attacca il Mayor e lo Storyteller sceglie invece un giocatore morto, il Soldier o un giocatore protetto dal Monk, quel giocatore non muore quella notte.</li></ul>",
         ability: "Se vivono solo 3 giocatori e non avviene alcuna esecuzione, la tua squadra vince. Se muori di notte, un altro giocatore potrebbe morire al tuo posto.",
@@ -144,6 +157,7 @@ let characters = [
     },
 {
         name: "Butler",
+        id:"butler",	
         description: "Il Butler può votare solo quando vota il suo Master.",
         intro: "<ul><li>Ogni notte, il Butler sceglie un giocatore come proprio Master. Può essere lo stesso giocatore della notte precedente o uno diverso.</li><li>Se il Master ha la mano alzata per votare, o se il voto del Master è già stato conteggiato, il Butler può alzare la mano per votare.</li><li>Se il Master tiene la mano abbassata, segnalando che non sta votando, oppure se il Master abbassa la mano prima che il suo voto venga conteggiato, anche il Butler deve abbassare la mano.</li><li>Non è responsabilità dello Storyteller controllare il Butler. È il Butler a essere responsabile del proprio voto. Votare deliberatamente quando non si dovrebbe è considerato barare.</li><li>Poiché gli esili non sono mai influenzati dalle abilità, il Butler può votare liberamente per un esilio.</li><li>I giocatori morti possono alzare la mano per votare solo se hanno un token voto. Questo vale anche se il Butler sceglie un giocatore morto come proprio Master.</li><li>Il Butler non è mai obbligato a votare.</li><li>Il voto del Butler può essere conteggiato dallo Storyteller prima o dopo quello del suo Master. La posizione a sedere non è importante.</li></ul>",
         ability: "Ogni notte, scegli un giocatore (non te stesso): domani potrai votare solo se anche lui sta votando.",
@@ -155,6 +169,7 @@ let characters = [
     },
 {
         name: "Drunk",
+        id:"drunk",	
         description: "Il giocatore Drunk crede di essere un Townsfolk e non ha idea di essere in realtà il Drunk.",
         intro: "<ul><li>Durante la preparazione, il token del Drunk non viene messo nel sacchetto. Al suo posto, viene messo nel sacchetto un token personaggio Townsfolk, e il giocatore che pesca quel token è segretamente il Drunk per tutta la partita. Lo Storyteller lo sa. Il giocatore no.</li><li>Il Drunk non ha alcuna abilità. Ogni volta che l’abilità del Townsfolk che crede di essere dovrebbe influenzare la partita in qualche modo, non lo fa. Tuttavia, lo Storyteller finge che il giocatore sia il Townsfolk che crede di essere. Se quel personaggio dovrebbe svegliarsi di notte, il Drunk si sveglia e agisce come se fosse quel Townsfolk. Se quel Townsfolk dovrebbe ottenere informazioni, lo Storyteller può invece fornire informazioni false — ed è incoraggiato a farlo.</li></ul>",
         ability: "Non sai di essere il Drunk. Credi di essere un personaggio Townsfolk, ma non lo sei.",
@@ -166,6 +181,7 @@ let characters = [
     },
 {
         name: "Recluse",
+        id:"recluse",	
         description: "La Recluse appare malvagia ma in realtà è buona.",
         intro: "<ul><li>Ogni volta che l’allineamento della Recluse viene rilevato, lo Storyteller sceglie se la Recluse viene registrata come buona o malvagia.</li><li>Ogni volta che la Recluse è bersaglio di un’abilità che colpisce Minion o Demon specifici, lo Storyteller sceglie se la Recluse viene registrata come quel Minion o Demon specifico.</li><li>La Recluse può essere registrata come buona o malvagia, oppure come Outsider, Minion o Demon, in momenti diversi della stessa notte. Lo Storyteller sceglie ciò che è più interessante.</li><li>Una Recluse che viene registrata come un particolare Minion o Demon non possiede l’abilità di quel personaggio. Per esempio, una Recluse che viene registrata come Poisoner non si sveglia di notte e non può avvelenare un giocatore.</li></ul>",
         ability: "Potresti essere registrata come malvagia e come un Minion o un Demon, anche se sei morta.",
@@ -177,6 +193,7 @@ let characters = [
     },
 {
         name: "Saint",
+        id:"saint",	
         description: "Il Saint termina la partita se viene giustiziato.",
         intro: "<ul><li>Se il Saint muore per esecuzione, la partita termina. I buoni perdono e i malvagi vincono.</li><li>Se il Saint muore in qualsiasi modo diverso dall’esecuzione — ad esempio se viene ucciso dal Demon — la partita continua.</li></ul>",
         ability: "Se muori per esecuzione, la tua squadra perde.",
@@ -188,6 +205,7 @@ let characters = [
     },
 {
         name: "Poisoner",
+        id:"poisoner",	
         description: "Il Poisoner interferisce segretamente con le abilità dei personaggi.",
         intro: "<ul><li>Ogni notte, il Poisoner sceglie qualcuno da avvelenare per quella notte e per l’intero giorno successivo.</li><li>Un giocatore avvelenato non ha alcuna abilità, ma lo Storyteller finge che ce l’abbia. Non influisce realmente sulla partita. Tuttavia, per mantenere l’illusione che il giocatore avvelenato non sia avvelenato, lo Storyteller lo sveglia nel momento appropriato e segue la procedura come se non fosse avvelenato. Se la sua abilità dovrebbe fornirgli informazioni, lo Storyteller può fornirgli informazioni false.</li><li>Se un giocatore avvelenato usa un’abilità “una volta per partita” mentre è avvelenato, non può più usare quell’abilità.</li></ul>",
         ability: "Ogni notte, scegli un giocatore: è avvelenato stanotte e durante il giorno di domani.",
@@ -199,6 +217,7 @@ let characters = [
     },
 {
         name: "Spy",
+        id:"spy",	
         description: "La Spy sa chi sono tutti. Appare buona, ma in realtà è malvagia.",
         intro: "<ul><li>Se un qualsiasi personaggio ha un’abilità che rileva o influenza un giocatore buono, allora la Spy può essere registrata come buona per quel personaggio. Se un qualsiasi personaggio ha un’abilità che rileva Townsfolk o Outsider, allora la Spy può essere registrata come uno specifico Townsfolk o Outsider per quel giocatore. È lo Storyteller a scegliere come la Spy viene registrata, anche come più personaggi o con entrambi gli allineamenti durante la stessa notte.</li><li>Una Spy che viene registrata come un particolare Townsfolk o Outsider non possiede l’abilità di quel personaggio. Per esempio, una Spy che viene registrata come Slayer non può uccidere il Demon.</li></ul>",
         ability: "Ogni notte, vedi il Grimorio. Potresti essere registrata come buona e come un Townsfolk o un Outsider, anche se sei morta.",
@@ -210,6 +229,7 @@ let characters = [
     },
 {
         name: "Baron",
+        id:"baron",	
         description: "Il Baron cambia il numero di Outsider in gioco.",
         intro: "<ul><li>Questo cambiamento avviene durante la preparazione e non viene annullato se il Baron muore. Un cambiamento dei personaggi durante la preparazione, indipendentemente da ciò che accade durante la partita, è indicato sulle schede dei personaggi e sui token tra parentesi quadre alla fine della descrizione di un personaggio—come [così].</li><li>Gli Outsider aggiunti sostituiscono sempre dei Townsfolk, non altri tipi di personaggio.</li></ul",
         ability: "Ci sono Outsider extra in gioco. [+2 Outsider]",
@@ -221,6 +241,7 @@ let characters = [
     },
 {
         name: "Scarlet Woman",
+        id:"scarletwoman",	
         description: "La Scarlet Woman diventa il Demon quando il Demon muore.",
         intro: "<ul><li>Se ci sono cinque o più giocatori immediatamente prima che il Demon muoia — cioè quattro o più giocatori rimangono vivi dopo la morte del Demon — allora la Scarlet Woman diventa immediatamente il Demon e la partita continua come se nulla fosse successo.</li><li>I Traveller non contano come giocatori nel determinare se l’abilità della Scarlet Woman si attiva.</li><li>Se sono vivi meno di cinque giocatori quando il Demon viene giustiziato, la partita termina e i buoni vincono.</li><li>Se cinque o più giocatori sono vivi quando l’Imp si uccide da solo di notte, la Scarlet Woman deve diventare il nuovo Imp.</li><li>Se la Scarlet Woman diventa il Demon, lo è a tutti gli effetti. I buoni vincono se viene giustiziata. Attacca ogni notte. Viene registrata come il Demon.</li></ul>",
         ability: "Se ci sono 5 o più giocatori vivi e il Demon muore, diventi il Demon. (I Traveller non contano)",
@@ -232,6 +253,7 @@ let characters = [
     },
 {
         name: "Imp",
+        id:"imp",	
         description: "<p>L’Imp uccide di notte e può creare copie di se stesso… a un prezzo terribile.</p>",
         intro: "<ul><li>Ogni notte tranne la prima, l’Imp sceglie un giocatore da uccidere. Poiché la maggior parte dei personaggi agisce dopo il Demon, quel giocatore probabilmente non potrà usare la propria abilità stanotte.</li><li>L’Imp, essendo un Demon, sa quali giocatori sono i suoi Minion e conosce tre personaggi buoni non in gioco che può tranquillamente usare come bluff.</li><li>Se l’Imp muore, la partita termina e i buoni vincono. Tuttavia, se l’Imp si uccide da solo di notte, muore e un Minion vivo diventa l’Imp. Questo nuovo Imp non agisce quella stessa notte, ma è ora l’Imp a tutti gli effetti — uccide ogni notte e perde se muore.</li></ul>",
         ability: "Ogni notte*, scegli un giocatore: muore. Se ti uccidi in questo modo, un Minion diventa l’Imp.",
@@ -243,6 +265,7 @@ let characters = [
     },
     {
         name: "Grandmother",
+        id:"grandmother",	
         description: "The Gandmother knows who their Grandchild is, but if they are killed by the Demon, the Grandmother dies too.",
         intro: "<ul><li>During the first night, the Grandmother learns their Grandchild—a good player who is a Townsfolk or Outsider. The Grandchild does not learn that they have a Grandmother.</li><li>If the Demon kills the Grandchild, the Grandmother dies too. If the Grandchild dies by any other means—such as execution, or another type of death at night—the Grandmother does not also die.</li></ul>",
         ability: 'You start knowing a good player & their character. If the Demon kills them, you die too.',
@@ -254,6 +277,7 @@ let characters = [
     },
     {
         name: "Sailor",
+        id:"sailor",	
         description: "The Sailor is either drunk or getting somebody else drunk. While the Sailor is sober, they cannot die.",
         intro: `<ul><li>Each night, the Sailor chooses a player, who will probably get drunk.</li><li>If they choose themself, they lose their "cannot die" ability until they become sober.</li><li>If the Sailor chooses a dead player accidentally, the Storyteller prompts them to choose again.</li><li>If the Sailor chooses another player, the Storyteller chooses which player is drunk. If they choose a Townsfolk, the Storyteller will usually make the Townsfolk drunk, but if an Outsider, a Minion, or the Demon is chosen, then the Storyteller will usually make the Sailor the drunk one.</li><li>While sober, the Sailor cannot die, even if they have not yet woken at night to go drinking.</li></ul>`,
         ability: 'Each night, choose an alive player: either you or they are drunk until dusk. You can\'t die.',
@@ -265,6 +289,7 @@ let characters = [
     },
     {
         name: "Chambermaid",
+        id:"chambermaid",	
         description: "The Chambermaid learns who woke up at night.",
         intro: "<ul><li>Each night, the Chambermaid chooses two players and learns if they woke tonight. They must choose alive players, and may not choose themself. This does not detect which of those players woke, only how many.</li><li>This ability only detects characters who woke in order to use their ability. It does not detect characters who woke for any other reason—such as if the Storyteller woke a Minion to let them know who the Demon is, woke the Demon to give them their starting Demon info, woke a player due to the ability of a different character, or woke someone accidentally.</li><li>If the character woke on a previous night but not this night, they are not detected by the Chambermaid.</li><li>Players that woke tonight due to their ability but are drunk or poisoned still count as having woke tonight.</li><li>If the Chambermaid chooses a dead player accidentally, the Storyteller prompts them to choose again.</li></ul>",
         ability: 'Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.',
@@ -276,6 +301,7 @@ let characters = [
     },
     {
         name: "Exorcist",
+        id:"exorcist",	
         description: "The Exorcist prevents the Demon from waking to attack.",
         intro: "<ul><li>Each night, the Exorcist chooses a player. If they choose a player who is not the Demon, the Demon may still attack. If they choose the Demon, the Demon does not wake tonight, so does not choose players to attack tonight. The Demon learns that they cannot attack and who the Exorcist is.</li><li>Any other Demon abilities still function—such as the Zombuul staying alive if killed, the Pukka killing a player they attacked on a previous night, or the Shabaloth regurgitating a player.</li><li>The Exorcist may not choose the same player two nights in a row.</li></ul>",
         ability: 'Each night*, choose a player (different to last night): the Demon, if chosen, learns who you are then doesn\'t wake tonight.',
@@ -287,6 +313,7 @@ let characters = [
     },
     {
         name: "Innkeeper",
+        id:"innkeeper",	
         description: "The Innkeeper protects players from death at night, but somebody gets drunk in the process.",
         intro: "<ul><li>The Innkeeper, like the Monk, makes players safe from being killed by the Demon. They are also safe from death caused by Outsiders, Minions, Townsfolk, and Travellers.</li><li>The Innkeeper only protects players at night, not the day.</li><li>One of the two players that the Innkeeper chooses becomes drunk for tonight and the next day. This player may be good or evil, but will almost always be good, depending how your game is going. An Innkeeper that chooses themself might become drunk, which means they have no ability and may die tonight—and the other player they chose to protect isn't safe either.</li></ul>",
         ability: 'Each night*, choose 2 players: they can\'t die tonight, but 1 is drunk until dusk.',
@@ -298,6 +325,7 @@ let characters = [
     },
     {
         name: "Gambler",
+        id:"gambler",	
         description: "The Gambler can guess who is who…but pays the ultimate price if they guess wrong.",
         intro: "<ul><li>Each night except the first, the Gambler chooses a player and guesses their character by pointing to its icon on the character sheet. If the guess is correct, nothing happens. If the guess is incorrect, the Gambler dies.</li><li>The Gambler does not learn from the Storyteller whether their guess is correct or incorrect.</li><li>The Gambler may choose any player, dead or alive, even themself.</li></ul>",
         ability: 'Each night*, choose a player & guess their character: if you guess wrong, you die.',
@@ -309,6 +337,7 @@ let characters = [
     },
     {
         name: "Gossip",
+        id:"gossip",	
         description: "The Gossip deliberately speaks lies in the hope of uncovering the truth.",
         intro: "<ul><li>Each day, the Gossip may make a public statement. If this statement is true, the Storyteller kills a player that night. If it is false, then no players die due to the Gossip.</li><li>Mumbled words, whispers, statements the Storyteller doesn't know are true or false, or statements that someone cannot hear don't count. Like the Slayer's ability, the Storyteller and every player must be able to hear and understand the Gossip and be aware that the Gossip is using their ability in order for the Storyteller to judge what happens next.</li><li>If the Gossip made a true statement during the day while drunk or poisoned, but is sober and healthy when their ability triggers that night, the Storyteller still kills a player.</li></ul>",
         ability: 'Each day, you may make a public statement. Tonight, if it was true, a player dies.',
@@ -320,6 +349,7 @@ let characters = [
     },
     {
         name: "Courtier",
+        id:"courtier",	
         description: "The Courtier gets a character drunk, without knowing which player it is.",
         intro: "<ul><li>Once per game, the Courtier chooses a character to be drunk for three nights and three days, starting immediately.</li><li>The Courtier does not learn if they were successful or not, so they might choose a character that is not in play.</li><li>The Courtier chooses a character, <i>not</i> a player. The Courtier player may need to be reminded of this. Evil players bluffing as the Courtier may also need to be reminded.</li><li>If the drunk or poisoned Courtier chooses a character, that character is not drunk, even if the Courtier later becomes sober and healthy. If the Courtier made a character drunk, but the Courtier becomes drunk or poisoned, the player they made drunk becomes sober again. If the Courtier becomes sober and healthy again before the three nights and three days have ended, that player becomes drunk yet again.</li></ul>",
         ability: 'Once per game, at night, choose a character: they are drunk for 3 nights & 3 days.',
@@ -331,6 +361,7 @@ let characters = [
     },
     {
         name: "Professor",
+        id:"professor",	
         description: "The Professor can bring someone back from the dead.",
         intro: `<ul><li>Once per game, the Professor can choose a dead player. If that player is a Townsfolk, they are resurrected, becoming alive again.</li><li>If the Professor chooses an Outsider, Minion, or Demon, then nothing happens, and the Professor's ability is gone.</li><li>The resurrected player regains their ability, even a "once per game" ability they used already.</li><li>Resurrected Townsfolk may or may not get to act on the night of their resurrection, depending on whether they would act before or after the Professor. If they had a "first night only" or "you start knowing" ability, they immediately wake to use it again, as soon as the Professor goes to sleep.</li></ul>`,
         ability: 'Once per game, at night*, choose a dead player: if they are a Townsfolk, they are resurrected.',
@@ -342,6 +373,7 @@ let characters = [
     },
     {
         name: "Minstrel",
+        id:"minstrel",	
         description: "The Minstrel makes everybody drunk if a Minion dies.",
         intro: "<ul><li>If a Minion is executed and dies, all players (except the Minstrel) become drunk immediately and stay drunk all through the night and all the following day. Townsfolk, Outsiders, Minions, and even Demons become drunk, but not Travellers. This doesn't happen if a Minion died at night.</li><li>If a dead Minion is executed, the Minstrel ability does not trigger—a dead character cannot die again! If a Minion is executed but does not die, the Minstrel's ability does not trigger. If the Minstrel is drunk or poisoned when a Minion dies by execution, the Minstrel ability does not trigger.</li></ul>",
         ability: 'When a Minion dies by execution, all other players (except Travellers) are drunk until dusk tomorrow.',
@@ -353,6 +385,7 @@ let characters = [
     },
     {
         name: "Tea Lady",
+        id:"tealady",	
         description: "The Tea Lady protects her neighbors from death…as long as they are good.",
         intro: "<ul><li>If both alive neighbors of the Tea Lady are currently good, those neighbors cannot die. The Demon cannot kill them, nor the Godfather, nor the Gossip. If they are executed, they do not die. The only exception is the Assassin, who can kill someone protected from death.</li><li>The Tea Lady's alive neighbors are the two alive players closest to the Tea Lady—one clockwise and one counterclockwise. Skip past any dead neighbors.</li><li>However, if either alive neighbor is evil, or both are, then the Tea Lady does not protect her alive neighbors. If an evil player dies and the Tea Lady is now neighboring two good players, then neither can die.</li></ul>",
         ability: 'If both your alive neighbors are good, they can\'t die.',
@@ -364,6 +397,7 @@ let characters = [
     },
     {
         name: "Pacifist",
+        id:"pacifist",	
         description: "The Pacifist prevents good players from dying by execution.",
         intro: "<ul><li>When a good player is executed, the Storyteller chooses whether they die or live.</li><li>As always, when abilities like this function in obvious ways, the group is not told why something has happened, only what has happened. The group learns that an execution succeeded, but that the executed player did not die—that is all.</li><li>If a player is executed and remains alive, that still counts as the execution for today. No other nominations may happen.</li></ul>",
         ability: 'Executed good players might not die.',
@@ -375,6 +409,7 @@ let characters = [
     },
     {
         name: "Fool",
+        id:"fool",	
         description: "The Fool escapes death…once.",
         intro: "<ul><li>The first time the Fool dies for any reason, the Fool remains alive. They don't learn that their ability saved their life.</li><li>If another character's ability protects the Fool from death, the Fool does not use their ability. Only the time that the Fool would actually for realsy bona fide be dead does the Fool's ability trigger.</li></ul>",
         ability: 'The first time you die, you don\'t.',
@@ -386,6 +421,7 @@ let characters = [
     },
     {
         name: "Goon",
+        id:"goon",	
         description: "The Goon is immune to other characters at night, but keeps changing allegiances.",
         intro: "<ul><li>Each night, the first time a player wakes to use their ability and chooses the Goon, that player becomes drunk immediately. Their ability does not work tonight, nor the next day.</li><li>Later on the same night, if another player wakes to use their ability and chooses the Goon, their ability works as normal.</li><li>The Goon cannot make a player drunk unless the player chose the Goon. The Storyteller choosing the Goon due to an ability, such as the Grandmother's, doesn't count.</li><li>As soon as the Goon makes a player drunk, the Goon changes alignment to match theirs. The Goon still changes alignment, and makes the player drunk, if the player choosing the Goon was already drunk or poisoned.</li><li>If chosen by the Assassin, the Goon dies but still turns evil.</li></ul>",
         ability: 'Each night, the 1st player to choose you with their ability is drunk until dusk. You become their alignment.',
@@ -397,6 +433,7 @@ let characters = [
     },
     {
         name: "Lunatic",
+        id:"lunatic",	
         description: "The Lunatic thinks that they are the Demon.",
         intro: "<ul><li>Much like the Drunk, the Lunatic does not know their real character or real alignment. They are woken each night to attack as if they were the Demon that is in play, but their choices have no effect because they have no Demon ability.</li><li>The Lunatic wakes during the first night to learn three bluffs and the appropriate number of Minions, but this information may be wrong.</li><li>The real Demon knows which players the Lunatic chose to attack each night.</li></ul>",
         ability: 'You think you are a Demon, but you are not. The Demon knows who you are & who you choose at night.',
@@ -408,6 +445,7 @@ let characters = [
     },
     {
         name: "Tinker",
+        id:"tinker",	
         description: "The Tinker can die at any time, for no reason.",
         intro: "<ul><li>The Storyteller may kill the Tinker at any time.</li><li>The Tinker cannot die from their ability while protected from death, as normal.</li></ul>",
         ability: 'You might die at any time.',
@@ -419,6 +457,7 @@ let characters = [
     },
     {
         name: "Moonchild",
+        id:"moonchild",	
         description: "The Moonchild curses someone upon death, killing them too.",
         intro: "<ul><li>The Moonchild must choose a player within a minute or two of learning that they are dead, whether by an execution or at dawn when the Storyteller declares who died at night. The Moonchild can take their time and get advice from the group before making this decision.</li><li>If the Moonchild chooses a good player, that player dies tonight. If they choose an evil player, nothing happens.</li><li>As always, play along if an evil player is bluffing as the Moonchild and pretends to use their ability.</li><li>It is not the Storyteller's responsibility to prompt the Moonchild to choose a player. The Moonchild must do this shortly after they learn that they are dead. Deliberately not doing so is considered cheating.</li><li>If the Moonchild is sober and healthy at night but was drunk or poisoned when they chose a player today, that player dies. If the Moonchild is drunk or poisoned at night but was sober and healthy when they chose a player today, that player doesn't die.</li><li>The Moonchild kills the Goon if the Goon was good when the Moonchild chose them, regardless of the Goon's alignment at night.</li></ul>",
         ability: 'When you learn that you died, publicly choose 1 alive player. Tonight, if it was a good player, they die.',
@@ -430,6 +469,7 @@ let characters = [
     },
     {
         name: "Godfather",
+        id:"godfather",	
         description: "The Godfather takes revenge when the town kills Outsiders.",
         intro: "<ul><li>Whenever an Outsider is executed and dies, the Godfather chooses one player to die that night.</li><li>The Godfather only kills if an Outsider dies during the day. Outsiders that die at night don't count.</li><li>If the Godfather is in play, this adds or removes one Outsider from play.</li><li>At the start of the game, the Godfather learns which Outsiders are in play.</li><li>If two Outsiders died today, the Godfather still only kills one player tonight.</li></ul>",
         ability: 'You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [-1 or +1 Outsider]',
@@ -441,6 +481,7 @@ let characters = [
     },
     {
         name: "Devil's Advocate",
+        id:"devilsadvocate",	
         description: "The Devil's Advocate saves players from execution.",
         intro: "<ul><li>Each night, the Devil's Advocate chooses a player to protect from death by execution. The next day, if that player is executed, the execution succeeds but the player remains alive.</li><li>The Devil's Advocate cannot choose the same player two nights in a row, whether or not that player was saved from execution today, and they cannot choose a Zombuul that registers as dead.</li></ul>",
         ability: 'Each night, choose a living player (different to last night): if executed tomorrow, they don\'t die.',
@@ -452,6 +493,7 @@ let characters = [
     },
     {
         name: "Assassin",
+        id:"assassin",	
         description: "The Assassin kills who the Demon cannot.",
         intro: "<ul><li>Once per game at night, the Assassin can kill a player. This player dies, even if they are protected from death in any way, such as from an ability.</li><li>The Assassin ability is affected by drunkenness and poisoning, as normal.</li><li>If the Assassin attacks the Goon, the Goon dies and turns evil.</li></ul>",
         ability: 'Once per game, at night*, choose a player: they die, even if for some reason they could not.',
@@ -464,6 +506,7 @@ let characters = [
     },
     {
         name: "Mastermind",
+        id:"mastermind",	
         description: "The Mastermind can still win after the Demon is dead.",
         intro: `<ul><li>If the Demon dies by execution, the game continues. The players do not learn that the Demon died. The following day, if a good player is executed—whether or not they die from it—then evil wins. If an evil player is executed or nobody is executed, then the good team wins.</li><li>A dead Demon does not get to attack. They lose their ability, as normal. During this extra night and day, other characters' abilities function as normal.</li><li>If the Demon dies and just two players are left alive, the game still continues for another day—evil does not win from two players being alive, and good did not win by killing the Demon. The Mastermind ability says "play for one more day," and abilities override standard game rules.</li></ul>`,
         ability: 'If the Demon dies by execution (ending the game), play for 1 more day. If a player is then executed, their team loses.',
@@ -475,6 +518,7 @@ let characters = [
     },
     {
         name: "Zombuul",
+        id:"zombuul",	
         description: `The Zombuul secretly remains alive while in the grave.`,
         intro: "<ul><li>When the Zombuul would die for any reason, they actually don't die, but the Storyteller acts as if they died. The second time the Zombuul dies, they die for real and good wins.</li><li>The seemingly dead Zombuul counts as a dead player in almost every way. The player's life token on the Town Square flips to indicate their death. The next time they vote, they lose their vote token. They cannot nominate, they may vote with the Voudon, they're not an alive neighbor for the Tea Lady, and so on. The only differences are that the game continues, the Zombuul still attacks, and the game continues if just two other players are alive.</li><li>The Zombuul only wakes at night to attack if nobody died that day. If a dead player is executed, the player can't die again, so the Zombuul would still wake.</li><li>If a drunk or poisoned Zombuul dies, good wins. If a “dead” Zombuul becomes drunk or poisoned, do not announce that the player is alive.</li></ul>",
         ability: 'Each night*, if no-one died today, choose a player: they die. The 1st time you die, you live but register as dead.',
@@ -486,6 +530,7 @@ let characters = [
     },
     {
         name: "Pukka",
+        id:"pukka",	
         description: `The Pukka poisons its victims, who die at a later time.`,
         intro: "<ul><li>When the Pukka attacks, their victim is poisoned immediately. On the next night, just after the Pukka attacks again, that player dies.</li><li>Unlike other Demons, the Pukka acts during the first night.</li><li>The Exorcist prevents the Pukka from waking to poison a player. The Innkeeper prevents the Pukka from killing a poisoned player, then that player is no longer poisoned.</li><li>If the Pukka is drunk and chooses a player, that player does not become poisoned, so does not die the following night.</li><li>If the Pukka was sober when they chose a player the previous night, but is drunk at night, that player does not die. But when the Pukka sobers up, the poison resumes and kills the player at night.</li></ul>",
         ability: 'Each night, choose a player: they are poisoned. The previously poisoned player dies then becomes healthy.',
@@ -497,6 +542,7 @@ let characters = [
     },
     {
         name: "Shabaloth",
+        id:"shabaloth",	
         description: "The Shabaloth eats two players per night, but may vomit one of them back up the following night.",
         intro: `<ul><li>Unlike most Demons, the Shabaloth attacks twice per night. The night after the attack, the Storyteller may decide that one of the players attacked by the Shabaloth comes back to life.</li><li>This can be an alive player that was killed, or a dead player that was attacked.</li><li>The regurgitated player regains their ability, even a "once per game" ability already used. If they had a "first night only" or "start knowing" ability, they may use it again.</li></ul>`,
         ability: 'Each night*, choose 2 players: they die. A dead player you chose last night might be regurgitated.',
@@ -508,6 +554,7 @@ let characters = [
     },
     {
         name: "Po",
+		id:"po",
         examples: `The Po can choose to attack nobody at night, but goes on a rampage the following night.`,
         intro: `<ul><li>The Po attacks one player per night, like many other Demons. However, if the Po chooses to attack nobody, then they may attack three players the following night.</li><li>If the Po was drunk or poisoned when they chose nobody last night, they still choose three players tonight.</li><li>A Po must choose three players when prompted to do so. They cannot choose no one again.</li><li>The Po only gets three attacks if they chose nobody. The Po does not get three attacks if they chose to attack someone the previous night, but that player did not die.</li><li>The Po doesn't act on the first night, but this night does not count as a night where the Po "chose no one."</li><li>If the Exorcist selects the Po, the Po does not act, but this night does not count as a night where the Po "chose no one." However, if the Po chose no one the night before the Exorcist chose the Po, the Po chooses three players the night after the Exorcist chose the Po, because their last choice was no one.</li></ul>`,
         ability: 'Each night*, you may choose a player: they die. If your last choice was no-one, choose 3 players tonight.',
@@ -519,6 +566,7 @@ let characters = [
     },
     {
         name: "Clockmaker",
+        id:"clockmaker",	
         description: `The Clockmaker learns the distance from the Demon to their nearest Minion.`,
         intro: "<ul><li>The Clockmaker only learns this on the first night.</li><li>The distance is the number of seated players, starting from the player next to the Demon and ending at the nearest Minion, either clockwise or counterclockwise.</li></ul>",
         ability: 'You start knowing how many steps from the Demon to its nearest Minion.',
@@ -530,6 +578,7 @@ let characters = [
     },
     {
         name: "Dreamer",
+        id:"dreamer",	
         description: "The Dreamer learns which player is which character, but is never sure.",
         intro: "<ul><li>Each night, the Dreamer chooses a player and learns two characters—one that the player is, and one that the player isn't.</li><li>The false character token depends on the chosen player's true character type. If the Dreamer chooses a player who is a Townsfolk or Outsider, the false character token is any Minion or Demon. If they choose a player who is a Minion or Demon, the false character token is a Townsfolk or Outsider.</li><li>The Dreamer may not choose themself, and may not choose a Traveller.</li></ul>",
         ability: 'Each night, choose a player (not yourself or Travellers): you learn 1 good & 1 evil character, 1 of which is correct.',
@@ -541,6 +590,7 @@ let characters = [
     },
     {
         name: "Snake Charmer",
+        id:"snakecharmer",	
         description: "The Snake Charmer learns which players are not the Demon…but becomes the Demon if they get too greedy or too bold.",
         intro: "<ul><li>Each night, they choose a player. If that player is not the Demon, nothing happens. If they are the Demon, the Snake Charmer becomes that Demon and turns evil, and the Demon becomes good and poisoned permanently.</li><li>If the Philosopher has the Snake Charmer ability and becomes the Demon, the Demon becomes a poisoned Philosopher.</li></ul>",
         ability: 'Each night, choose an alive player: a chosen Demon swaps characters & alignments with you & is then poisoned.',
@@ -552,6 +602,7 @@ let characters = [
     },
     {
         name: "Mathematician",
+        id:"mathematician",	
         description: 'The Mathematician knows how many things have "gone wrong" since dawn today.',
         intro: "<ul><li>When an ability does not work in the intended way due to another character's interference, the Mathematician will learn that it happened. They'll learn that something went wrong if a piece of information was false but was supposed to be true, or if an ability should have worked but didn't, due to another character.</li><li>The Mathematician does not learn which players this happened to, only how many times it happened.</li><li>The Mathematician does not detect their own ability failing.</li><li>The Mathematician does not detect drunkenness or poisoning itself, but does detect when drunk or poisoned players' abilities did not work as intended. The Recluse registering as evil to the Chef, and the poisoned Soldier dying from the Imp's attack, would each be detected. The poisoned Empath getting true information would not.</li></ul>",
         ability: 'Each night, you learn how many players\' abilities worked abnormally (since dawn) due to another character\'s ability.',
@@ -563,6 +614,7 @@ let characters = [
     },
     {
         name: "Flowergirl",
+        id:"flowergirl",	
         description: "The Flowergirl knows if the Demon voted or not.",
         intro: `<ul><li>A Demon's vote counts whether or not the nominee was executed.</li><li>The Flowergirl does not detect if the Demon raised their hand for other reasons, such as when the players "vote" on what to order for dinner, or when the players raise their hand to exile a Traveller.</li><li>If the Demon changes players after the original Demon voted but before the Flowergirl wakes to learn their information, the Flowergirl detects the original Demon.</li><li>If there are two (or more!) Demons, even dead Demons, the Flowergirl detects if any of them voted. If even one Demon voted, the Flowergirl learns a "yes".</li></ul>`,
         ability: 'Each night*, you learn if a Demon voted today.',
@@ -574,6 +626,7 @@ let characters = [
     },
     {
         name: "Town Crier",
+        id:"towncrier",	
         description: `The Town Crier knows when Minions nominate.`,
         intro: `<ul><li>Each night, the Town Crier learns either a "yes" or a "no".</li><li>They do not learn which players are Minions or how many Minions made nominations, just whether or not any Minions made nominations today.</li></ul>`,
         ability: 'Each night*, you learn if a Minion nominated today.',
@@ -585,6 +638,7 @@ let characters = [
     },
     {
         name: "Oracle",
+        id:"oracle",	
         description: "The Oracle knows how many dead players are evil.",
         intro: "<ul><li>Because the Oracle acts after the Demon attacks each night, the Oracle's info refers to the players that are dead when dawn breaks and all players open their eyes.</li><li>The Oracle detects dead Minions and Demons, but also any other players that are evil, such as evil Travellers, or Townsfolk or Outsiders that have been turned evil.</li><li>When counting the number of dead players, remember to count Townsfolk and Outsider tokens that are upside-down, which means their alignment is the opposite of what is printed.</li></ul>",
         ability: 'Each night*, you learn how many dead players are evil.',
@@ -596,6 +650,7 @@ let characters = [
     },
     {
         name: "Savant",
+        id:"savant",	
         description: "The Savant gets amazing information that is different every day and every game, but half of it is false.",
         intro: "<ul><li>Each day, the Storyteller chooses two pieces of information to give the Savant...so get creative! One must be true, and one must be false, and the Savant won't know which is which.</li><li>It is up to the Savant to talk with the Storyteller, not the other way around. This isn't a public conversation, and the group can't listen in. It's private.</li><li>The Savant can choose to not visit the Storyteller if they wish.</li><li>A drunk or poisoned Savant might get two pieces of true information or two pieces of false information.</li></ul>",
         ability: 'Each day, you may visit the Storyteller to learn 2 things in private: 1 is true & 1 is false.',
@@ -607,6 +662,7 @@ let characters = [
     },
     {
         name: "Seamstress",
+        id:"seamstress",	
         description: "The Seamstress learns whether two players are on the same team as each other.",
         intro: "<ul><li>They only get this information once per game, so they had best choose wisely when and who.</li><li>They may choose alive or dead players or even Travellers.</li></ul>",
         ability: 'Once per game, at night, choose 2 players (not yourself): you learn if they are the same alignment.',
@@ -618,6 +674,7 @@ let characters = [
     },
     {
         name: "Philosopher",
+        id:"philosopher",	
         description: "The Philosopher decides their own ability.",
         intro: "<ul><li>They can do this once per game. When they do so, they gain that character's ability. They do not become that character.</li><li>They may want to wait a while to choose. If the Philosopher chooses a character that is already in play, the player of that character becomes drunk. If the Philosopher then dies or becomes drunk or poisoned, the player they are making drunk becomes sober again.</li><li>If the Philosopher chose a character that was not in play at the time but is in play now, that character is drunk.</li><li>If the Philosopher gains an ability that works at night, they wake when that character would wake. If this ability is used on the first night only, they use it tonight.</li><li>If the Philosopher regains their ability via the Bone Collector, or uses their ability twice via the Barista, the Philosopher may choose a new ability, or the same ability as before.</li><li>If the Philosopher's ability works while dead, such as the Klutz's, it works if the Philosopher is dead.</li></ul>",
         ability: 'Once per game, at night, choose a good character: gain that ability. If this character is in play, they are drunk.',
@@ -629,6 +686,7 @@ let characters = [
     },
     {
         name: "Artist",
+        id:"artist",	
         description: "The Artist may ask any one question of the Storyteller.",
         intro: `<ul><li>The question may deal with anything at all, phrased in any way they want. The Storyteller honestly answers "yes," "no," or "I don't know."</li><li>It is up to the Artist to talk with the Storyteller, not the other way around. This isn't a public conversation, and the group can't listen in. It's private.</li></ul>`,
         ability: 'Once per game, during the day, privately ask the Storyteller any yes/no question.',
@@ -640,6 +698,7 @@ let characters = [
     },
     {
         name: "Juggler",
+        id:"juggler",	
         description: "The Juggler takes the risk of convincing people to reveal their characters during the first day, in the hope of guessing as many as possible that are telling the truth.",
         intro: "<ul><li>On the first day, they may guess which players are which characters. That night, the Juggler learns how many guesses they got right…if they are not killed beforehand.</li><li>They must make their guesses publicly, so everyone hears what is guessed. They may guess zero characters, or up to five characters, and these characters and players may be different or the same.</li><li>If the Juggler made their guesses while drunk or poisoned, but is sober and healthy when their ability triggers that night, then the Storyteller still gives them true information.</li></ul>",
         ability: 'On your 1st day, publicly guess up to 5 players\' characters. That night, you learn how many you got correct.',
@@ -651,6 +710,7 @@ let characters = [
     },
     {
         name: "Sage",
+        id:"sage",	
         description: "The Sage knows nothing while alive, but if the Demon kills them, they learn who it is.",
         intro: "<ul><li>The Sage only gets this information when killed by a Demon attack. Being executed does not count.</li></ul>",
         ability: 'If the Demon kills you, you learn that it is 1 of 2 players.',
@@ -662,6 +722,7 @@ let characters = [
     },
     {
         name: "Mutant",
+        id:"mutant",	
         description: "The Mutant is executed if they try to reveal who they are.",
         intro: `<ul><li>"Madness" is a term that means "you are trying to convince the group of something." So, if the Mutant player is mad about being the Mutant, this means they are trying to convince people that they are the Mutant. If they are mad about being an Outsider, this means they are trying to convince people that they are an Outsider.</li><li>This can be by verbally hinting who they are, or by their silence when questioned. It is always up to the Storyteller to decide what the Mutant is doing. If you think they are trying to convince the group they are an Outsider in any way, you can execute them—even outside the nomination phase, or at night. If you do, no other executions may happen today by normal means, since there is only one execution per day.</li><li>If the Mutant hints that they are the Mutant at night, you may execute them that night. Declare they have died, and continue the night phase as normal. An execution may still happen the next day.</li></ul>`,
         ability: 'If you are "mad" about being an Outsider, you might be executed.',
@@ -673,6 +734,7 @@ let characters = [
     },
     {
         name: "Barber",
+        id:"barber",	
         description: "The Barber allows the Demon to swap two characters.",
         intro: `<ul><li>The players' alignments stay the same when they swap characters. Each player learns which character they become.</li><li>The Demon may choose not to swap players.</li><li>If a player becomes a new character, they gain the new ability, even if it was a "you start knowing" ability or a "once per game" ability that the original character already used.</li><li>If there is more than one living Demon, the Storyteller chooses which Demon makes the swap.</li><li>The Demon may choose themself to swap.</li><li>The Demon may not choose another Demon player to swap.</li><li>If a player dies, then becomes the Barber, the Demon may not swap two players' characters tonight.</li></ul>`,
         ability: 'If you died today or tonight, the Demon may choose 2 players (not another Demon) to swap characters.',
@@ -685,6 +747,7 @@ let characters = [
     {
         name: "Sweetheart",
         debugger: "The Sweetheart, when they die, makes someone drunk for the rest of the game.",
+        id:"sweetheart",	
         description: "<ul><li>The Storyteller chooses which player becomes drunk.</li><li>This ability works while the Sweetheart is dead.</li></ul>",
         intro: "The Sweetheart, when they die, causes someone to be drunk for the rest of the game.",
         ability: 'When you die, 1 player is drunk from now on.',
@@ -696,6 +759,7 @@ let characters = [
     },
     {
         name: "Klutz",
+        id:"klutz",	
         description: "The Klutz might accidentally lose the game for their team, unless they are clever.",
         intro: "<ul><li>When the Klutz dies, they must declare a player. They may take a few minutes to do so—after all, it's a big decision, and other players may give advice on who to choose, but it is always the Klutz's decision. If they choose an evil player, the game ends immediately and the good team loses. If they choose a good player, nothing happens and the game continues.</li><li>It is not the Storyteller's responsibility to prompt the Klutz to declare they are the Klutz and choose a player. The Klutz must do this shortly after they learn that they are dead. Deliberately not doing so is considered cheating.</li></ul>",
         ability: 'When you learn that you died, publicly choose 1 alive player: if they are evil, your team loses.',
@@ -707,6 +771,7 @@ let characters = [
     },
     {
         name: "Witch",
+        id:"witch",	
         description: "The Witch curses players, so that they die if they nominate.",
         intro: "<ul><li>Each night, the Witch chooses a player to curse. That player dies if they nominate any player on the next day, although their nomination still counts.</li><li>The Witch's curse lasts only for one day, but the Witch may curse the same player again and again each night.</li><li>As soon as just three players are left alive, the Witch's curse is immediately removed, and the Witch acts no more.</li></ul>",
         ability: 'Each night, choose a player: if they nominate tomorrow, they die. If just 3 players live, you lose this ability.',
@@ -718,6 +783,7 @@ let characters = [
     },
     {
         name: "Cerenovus",
+        id:"cerenovus",	
         description: `The Cerenovus encourages players to pretend to be different characters than they actually are.`,
         intro: `<ul><li>The Cerenovus chooses Townsfolk or Outsiders that players are mad about being. They must try to convince the group that they actually are this character tomorrow, or else die.</li><li>Simply hinting is not enough to avoid death. The player must make a decent effort to convince the group. Mad players are never literally forced to say things they don't want to—but if the Storyteller doesn't hear them make an effort, they pay the price.</li><li>Mad evil players might be executed this way, but "might" means you can choose not to, to prevent evil from winning by this strategy.</li><li>Like the Mutant, an execution penalty counts as the one execution allowed per day.</li></ul>`,
         ability: 'Each night, choose a player & a good character: they are "mad" they are this character tomorrow, or might be executed.',
@@ -729,6 +795,7 @@ let characters = [
     },
     {
         name: "Pit-Hag",
+        id:"pithag",	
         description: "The Pit-Hag changes players into different characters.",
         intro: "<ul><li>Each night, the Pit-Hag chooses a player and a character to turn that player into.</li><li>They can't create duplicate characters. If the character is already in play, nothing happens.</li></ul>",
         ability: 'Each night*, choose a player & a character they become (if not in play). If a Demon is made, deaths tonight are arbitrary.',
@@ -740,6 +807,7 @@ let characters = [
     },
     {
         name: "Evil Twin",
+        id:"eviltwin",	
         description: `The Evil Twin mirrors a good character, and the players don't know which twin is good and which twin is evil.`,
         intro: "<ul><li>The Evil Twin is paired with a good player, chosen by the Storyteller, called the Good Twin.</li><li>On the first night, the Evil Twin and Good Twin both wake, make eye contact, and learn each other's character.</li><li>If the Good Twin is executed, evil wins. If the Evil Twin is executed, the game continues. A dead Evil Twin has no ability, so evil doesn't win if the Good Twin is later executed.</li><li>Good cannot win while both twins are alive. Even if the Demon is killed, the game continues. Good will need to kill the Evil Twin as well as the Demon to win.</li><li>If a good player is turned into an Evil Twin, they are still a good player, with an evil player becoming their twin. It doesn't matter which twin is which character, what matters is their <i>alignment</i>—the good team can execute the evil <i>player</i> safely, but if they execute the good <i>player</i>, evil wins.</li><li>If both Twins are the same alignment, the Storyteller chooses a new Twin.</li></ul>",
         ability: 'You & an opposing player know each other. If the good player is executed, evil wins. Good can\'t win if you both live.',
@@ -752,6 +820,7 @@ let characters = [
 
     {
         name: "Fang Gu",
+        id:"fanggu",	
         description: "The Fang Gu possesses Outsiders.",
         intro: "<ul><li>The first time a Fang Gu attacks and kills an Outsider, the Fang Gu dies, and the Outsider becomes a Fang Gu and turns evil.</li><li>This can only happen once per game. If the new Fang Gu attacks an Outsider, the Outsider dies as normal.</li><li>The new Fang Gu counts as the Demon, and good wins if they die. They do not learn which players are Minions.</li><li>There is an extra Outsider in play.</li><li>If the Fang Gu attacks an Outsider but that Outsider does not die, that Outsider does not become an evil Fang Gu and the Fang Gu does not die.</li></ul>",
         ability: 'Each night*, choose a player: they die. The 1st Outsider this kills becomes an evil Fang Gu & you die instead. [+1 Outsider]',
@@ -763,6 +832,7 @@ let characters = [
     },
     {
         name: "Vigormortis",
+        id:"vigormortis",	
         description: "The Vigormortis kills their own Minions, who keep their ability.",
         intro: "<ul><li>Every time the Vigormortis kills a Minion, they die but keep their ability for as long as the Vigormortis remains alive. The Witch, Cerenovus, and Pit-Hag still act each night.</li><li>Somewhat like the No Dashii, the dead Minion's closest clockwise or closest counterclockwise Townsfolk becomes poisoned, even if they are dead. If the Vigormortis dies or otherwise loses their ability, then those players become healthy again. One Townsfolk per Minion will always be poisoned this way, as neighboring Outsiders, Minions, or Travellers are skipped. The Storyteller chooses which of the two Townsfolk is poisoned.</li><li>All Minions killed by the Vigormortis keep their ability and poison a Townsfolk, not just the most recent.</li><li>If a dead Minion becomes a non-Minion character, they no longer poison a Townsfolk and have no ability. If a dead Minion becomes drunk or poisoned, they lose their ability until they become sober and healthy again.</li></ul>",
         ability: 'Each night*, choose a player: they die. Minions you kill keep their ability & poison 1 Townsfolk neighbor. [-1 Outsider]',
@@ -774,6 +844,7 @@ let characters = [
     },
     {
         name: "No Dashii",
+        id:"nodashii",	
         description: "The No Dashii poisons their neighboring Townsfolk.",
         intro: "<ul><li>The No Dashii's closest clockwise and counterclockwise Townsfolk neighbors are poisoned, regardless of whether they are alive or dead. If a No Dashii dies or otherwise loses their ability, then those two players become healthy. Two Townsfolk players will always be poisoned this way, as neighboring Outsiders, Minions, or Travellers are skipped.</li><li>If a new player becomes the No Dashii, or a poisoned Townsfolk changes into a non-Townsfolk character, the players who are poisoned may change immediately based on who the neighbors of the No Dashii are.</li></ul>",
         ability: 'Each night*, choose a player: they die. Your 2 Townsfolk neighbours are poisoned.',
@@ -785,6 +856,7 @@ let characters = [
     },
     {
         name: "Vortox",
+        id:"vortox",	
         description: "The Vortox makes all information false.",
         intro: "<ul><li>Anytime a Townsfolk player gets information from their ability, they get false information. Even if they are drunk or poisoned, it must be false.</li><li>The Vortox does not affect information gained by other means, such as when the Storyteller explains the rules, or when a player's character or alignment changes.</li><li>When night falls, if nobody was executed today, evil wins. Exiling a Traveller does not count.</li></ul>",
         ability: 'Each night*, choose a player; they die. Townsfolk abilities yield false info. Each day, if no-one is executed, evil wins.',
@@ -796,6 +868,7 @@ let characters = [
     },
         {
         name: "Acrobat",
+        id:"acrobat",	
         description: `The Acrobat dies when they find a drunk or poisoned player.`,
         intro: "<ul><li>Each night except the first, the Acrobat chooses a player. If the chosen player is sober and healthy, nothing happens. If the player is drunk or poisoned, the Acrobat dies.</li><li>If the Acrobat is drunk or poisoned, they cannot die to their own ability.</li><li>The Acrobat may choose any player, dead or alive, even themself.</li><li>If the chosen player is sober and healthy at the time the Acrobat picks, but becomes drunk or poisoned later in the night, the Acrobat dies.</li><li>The Acrobat does not learn if the player they selected was drunk, or poisoned, or both.</li></ul>",
         ability: 'Each night*, choose a player: if they are or become drunk or poisoned tonight, you die.',
@@ -807,6 +880,7 @@ let characters = [
     },
     {
         name: "Alchemist",
+        id:"alchemist",	
         description: "The Alchemist has a Minion ability.",
         intro: "<ul><li>The Alchemist's ability must be that of a not-in-play Minion. It cannot duplicate an in-play Minion's ability.</li><li>The Alchemist learns which ability this is on the first night.</li><li>They are still a good Townsfolk. They win when good wins, and lose when good loses. They register as good and as the Alchemist.</li><li>The Alchemist does not wake to learn who the other Minions are or who the Demon is, like Minions do.</li><li>If the Alchemist's Minion ability adds or removes characters during setup, this still occurs during setup.</li></ul>",
         ability: 'You have a Minion ability. When using this, the Storyteller may prompt you to choose differently.',
@@ -818,6 +892,7 @@ let characters = [
     },
     {
         name: "Alsaahir",
+        id:"alsaahir",	
         description: "The Alsaahir guesses the entire evil team.",
         intro: "<ul><li>The Alsaahir's guesses need to be public, and they need to be during the day. They don't have to guess every day.</li><li>Other players may pretend to be the Alsaahir and make a guess. Like the Juggler or the Gossip, the Storyteller will briefly pretend that player is the Alsaahir.</li><li>If the Alsaahir guesses the Demon player as the Demon, and the Minion players as Minions, the game ends immediately. The Alsaahir must guess all Demon and Minion players.</li><li>The Alsaahir doesn't need to guess specific minion characters, nor demon characters.</li><li>If there is more than one Demon in play, all Demons must be guessed.</li><li>If a player is a Minion and a Demon, such as Legion, the Alsaahir must guess this player as a Demon.</li><li>Once a guess is made, the Alsaahir cannot change their mind later that day and guess again.</li><li>The Alsaahir needs to guess Minions and Demons, even if they are good, but need not guess which Travellers are evil.</li><li>If the evil team has changed during the game, the Alsaahir must guess the current evil team, not the starting evil team.</li></ul>",
         ability: 'Once per day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.',
@@ -829,6 +904,7 @@ let characters = [
     },
     {
         name: "Amnesiac",
+        id:"amnesiac",	
         description: "The Amnesiac doesn't know what their ability is.",
         intro: `<ul><li>The Storyteller decides what the Amnesiac's ability is. It may be the same ability as another character in <i>Blood On The Clocktower</i>, something similar, or something original.</li><li>The Amnesiac may wake at any time during the night to learn information or to choose a player, or their ability may be passive—not requiring action from the Amnesiac player.</li><li>Each day, the Amnesiac talks to the Storyteller in private, and makes a guess as to what their ability is. The Storyteller answers "cold" if the guess is very wrong, "warm" if the guess is on the right track, "hot" if the guess is very close, and "bingo" if the guess is spot on.</li><li>Their guess may be specific, such as "Am I learning two players each night that are the same alignment?", or vague, such as "Is my ability something to do with dead players?"</li></ul>`,
         ability: 'You do not know what your ability is. Each day, privately guess what it is: you learn how accurate you are.',
@@ -840,6 +916,7 @@ let characters = [
     },
     {
         name: "Atheist",
+        id:"atheist",	
         description: "The Atheist knows that all players are good and there is no such thing as Demons.",
         intro: "<ul><li>With the Atheist in play, there are no evil players—no Minions and no Demons.</li><li>Good wins if the Storyteller is executed. Any living player may nominate the Storyteller, and the Storyteller is executed if 50% or more of the living players vote.</li><li>If the Atheist is not in play and the Storyteller is executed, evil wins.</li><li>Good loses if just two players are alive.</li><li>The Storyteller may break any of the game's rules. They may kill a player who nominated to simulate a Witch curse, kill players at night to simulate a Demon attacking, give players false information to simulate drunkenness, change characters at night to simulate a Pit-Hag, or even have the wrong number of Outsiders in play.</li></ul>",
         ability: 'The Storyteller can break the game rules, and if executed, good wins, even if you are dead. [No evil characters]',
@@ -851,6 +928,7 @@ let characters = [
     },
     {
         name: "Balloonist",
+        id:"balloonist",	
         description: "The Balloonist knows a Townsfolk, an Outsider, a Minion, and a Demon, but gets them confused.",
         intro: "",
         ability: 'Each night, you learn a player of a different character type than last night. [+0 or +1 Outsider]',
@@ -862,6 +940,7 @@ let characters = [
     },
     {
         name: "Banshee",
+        id:"banshee",	
         description: "The Banshee becomes more powerful when dead – nominating and voting twice as much.",
         intro: "<ul><li>When alive, the Banshee nominates and votes like a regular player.</li><li>When dead, they may nominate twice per day, even though dead players may <strong>normally</strong> not nominate at all.</li><li>When dead, they may vote for any nomination they wish and do not need a vote token to do so. They may vote twice for the same nomination.</li><li>The Banshee only gains these powers if they were killed by the Demon. Dying by execution or to a non-Demon ability does not count.</li><li>To vote twice, the Banshee player raises both hands when votes are counted. If the player is unable to do this due to a physical disability, the Storyteller can count their normal vote twice.</li></ul>",
         ability: 'If the Demon kills you, all players learn this. From now on, you may nominate twice per day and vote twice per nomination.',
@@ -873,6 +952,7 @@ let characters = [
     },
     {
         name: "Bounty Hunter",
+        id:"bountyhunter",	
         description: `The Bounty Hunter learns all the evil players. One. Player. At. A. Time.`,
         intro: "",
         ability: 'You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]',
@@ -884,6 +964,7 @@ let characters = [
     },
     {
         name: "Cannibal",
+        id:"cannibal",	
         description: "The Cannibal eats executed characters, gaining their ability.",
         intro: `<ul><li>If a good player dies by execution, the Cannibal gains that player's ability. If an evil player dies by execution, the Cannibal only thinks that they gain an ability, since the Cannibal is poisoned. The Storyteller may be lying to them.</li><li>Each time a player dies by execution, the Cannibal loses the ability of the previous player.</li><li>Executing a dead player won't grant the Cannibal an ability. Executing a living player who doesn't die won't grant the Cannibal an ability. A player must be executed and die for the Cannibal to gain their ability.</li><li>The Cannibal is not told which ability they have gained. They must figure that out for themselves.</li><li>If the Cannibal has an "even if dead" ability, such as the Recluse, or an ability that implies it works while dead, such as the Ravenkeeper or Sweetheart, the Cannibal keeps that ability when they die, but loses their Cannibal ability.</li></ul>`,
         ability: 'You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution.',
@@ -895,6 +976,7 @@ let characters = [
     },
     {
         name: "Choirboy",
+        id:"choirboy",	
         description: `The Choirboy learns who the Demon is when the King is slain.`,
         intro: `<ul><li>The King can be in play without the Choirboy. During the setup phase, if the Choirboy is in play and the King isn't, the King is added. If a King is already in play, the Choirboy doesn't add a second King.</li><li>If the Demon kills the King using their ability, the Choirboy learns which player is the Demon. The Demon nominating and executing the King doesn't count. Minions that kill the King, such as the Assassin, don't count either.</li><li>If the Demon attacks the King but doesn't kill the King, the Choirboy doesn't learn who the Demon is.</li><li>The Choirboy learns which player the Demon is, but does not learn which character.</li></ul>`,
         ability: 'If the Demon kills the King, you learn which player is the Demon. [+the King]',
@@ -906,6 +988,7 @@ let characters = [
     },
     {
         name: "Cult Leader",
+        id:"cultleader",	
         description: "The Cult Leader convinces others to join their cult to end the game. But which team will win?",
         intro: "",
         ability: 'Each night, you become the alignment of an alive neighbour. If all good players choose to join your cult, your team wins.',
@@ -916,6 +999,7 @@ let characters = [
     },
     {
         name: "Engineer",
+        id:"engineer",	
         description: "The Engineer manufactures the threat that the town faces.",
         intro: `<ul><li>The Engineer can choose which Minion characters are in play, or which Demon is in play, but not both.</li><li>When the Engineer creates new in-play characters, the Demon player remains the Demon, and the Minion players remain Minions. The number of evil players stays the same.</li><li>If the Engineer tries to create an in-play character, that character stays as the same player. The Engineer doesn't learn this, and may not use their ability again.</li><li>If creating Minions, the Engineer chooses the same number of Minions that should be in play for the number of players <i>(see the Traveller sheet or the setup sheet)</i>.</li><li>If the Engineer accidentally chooses too many or too few characters, the Storyteller changes as many evil players' characters as is fair and feasible.</li><li>Only characters from the current script may be chosen.</li></ul>`,
         ability: 'Once per game, at night, choose which Minions or which Demon is in play.',
@@ -927,6 +1011,7 @@ let characters = [
     },
     {
         name: "Farmer",
+        id:"farmer",	
         description: "The Farmer creates more Farmers.",
         intro: `<ul><li>If a Farmer dies at night, another player becomes a Farmer too.</li><li>Only players that are good can become Farmers this way.</li><li>If this new Farmer also dies at night, another Farmer is created.</li><li>Farmers that die during the day, such as by execution, do not create more Farmers.</li><li>Farmers that have turned evil, such as from the Mezepheles' ability, can create more Farmers. But Townsfolk and Outsiders that have turned evil cannot become a Farmer.</li><li>Farmers do not learn who each other are, but each player that becomes a Farmer learns that they are now a Farmer.</li><li>When a player becomes a Farmer, they are no longer their old character, and do not have that ability. Any ongoing effects of their old ability immediately end.</li></ul>`,
         ability: 'When you die at night, an alive good player becomes a Farmer.',
@@ -938,6 +1023,7 @@ let characters = [
     },
     {
         name: "Fisherman",
+        id:"fisherman",	
         description: "Once per game, during the day, visit the Storyteller for some advice to help your team win.",
         intro: "",
         ability: 'Once per game, during the day, visit the Storyteller for some advice to help your team win.',
@@ -949,6 +1035,7 @@ let characters = [
     },
     {
         name: "General",
+        id:"general",	
         description: "The General knows who is winning.",
         intro: `<ul><li>If the good team is winning, the Storyteller gives a thumbs up. If the evil team is winning, the Storyteller gives a thumbs down. If neither team is winning, or the Storyteller isn't sure, the Storyteller gives a thumbs to the side.</li><li>The Storyteller is the judge on which team is winning. Many factors may be included, such as how many players of each team are still alive, how much information the good team has, how successful the evil team's bluffs seem to be, which players the group wants to execute next, or how experienced the Demon player is. All of these, and more, will inform the Storyteller's judgment.</li><li>The Storyteller decides who is winning at the point that the General wakes. Previous events in the night may affect their decision.</li></ul>`,
         ability: 'Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither.',
@@ -960,6 +1047,7 @@ let characters = [
     },
     {
         name: "High Priestess",
+        id:"highpriestess",	
         description: "The High Priestess acts on intuition.",
         intro: `<ul><li>The High Priestess can be shown the same player multiple times in a row, or a different player every night.</li><li>The shown player can be alive or dead.</li><li>The shown player can be good or evil.</li><li>There are no official criteria that determine which player the Storyteller must show to the High Priestess. It is up to the Storyteller's judgement as to what they think will most benefit the High Priestess and the good team in general. It could be because the player has important information that has not been revealed yet. Or because the player is evil and has a bluff that doesn't make sense. Or because the player is trustworthy and needs to be trusted more. Or because the player is good but on the wrong track and needs to be corrected. Or something new.</li></ul>`,
         ability: 'Each night, learn which player the Storyteller believes you should talk to most.',
@@ -971,6 +1059,7 @@ let characters = [
     },
     {
         name: "Huntsman",
+        id:"huntsman",	
         description: "The Huntsman saves the Damsel before the Minions find her...hopefully.",
         intro: `<ul><li>The Damsel can be in play without the Huntsman. During the setup phase, if the Huntsman is in play and the Damsel isn't, the Damsel is added. If a Damsel is already in play, the Huntsman doesn't add a second Damsel.</li><li>If the Huntsman correctly chooses the Damsel at night, the Damsel becomes a not-in-play Townsfolk immediately. The Storyteller chooses which Townsfolk character, and the Damsel learns which one.</li><li>When the Damsel becomes a Townsfolk, they gain that Townsfolk ability and lose the Damsel ability.</li><li>The Huntsman gets one guess, and makes it at night.</li><li>The Minions get one guess in total, and make it publicly during the day. If a Minion guesses who the Damsel is, evil wins. If a Minion incorrectly guesses who the Damsel is, the guess is used, and other Minions cannot win by correctly guessing the Damsel.</li><li>If the Damsel is drunk or poisoned but the Huntsman is sober and healthy, the Damsel can still become a Townsfolk.</li></ul>`,
         ability: 'Once per game, at night, choose a living player: the Damsel, if chosen, becomes a not-in-play Townsfolk. [+the Damsel]',
@@ -982,6 +1071,7 @@ let characters = [
     },
     {
         name: "King",
+        id:"king",	
         description: "The King learns which characters are still alive.",
         intro: "<ul><li>The King only gains this ability after a few nights have passed—once the dead players equal or outnumber the living.</li><li>At the start of the game, the Demon learns who the King is. If a King is created mid-game, the Demon learns who the King is that night.</li><li>The King may not survive long enough to use their ability. Once the number of dead players is greater than or equal to the number of alive players, the King learns one alive character each night.</li><li>The King may learn good or evil characters, and may even learn the same character more than once.</li><li>There may not be a Choirboy in play. But if there is, and they are still alive when the Demon kills the King, the Choirboy learns who the Demon is.</li></ul>",
         ability: 'Each night, if the dead equal or outnumber the living, you learn 1 alive character. The Demon knows you are the King.',
@@ -993,6 +1083,7 @@ let characters = [
     },
     {
         name: "Knight",
+        id:"knight",	
         description: "The Knight knows players that are not the Demon.",
         intro: "<ul><li>On the first night, the Knight learns two players who are not the Demon.</li><li>On subsequent nights, they learn nothing more.</li><li>The Knight can learn Townsfolk, Outsiders or even Minions but does not learn which character type they are.</li></ul>",
         ability: 'You start knowing 2 players that are not the Demon.',
@@ -1004,6 +1095,7 @@ let characters = [
     },
     {
         name: "Lycanthrope",
+        id:"lycanthrope",	
         description: "The Lycanthrope roams at night, killing the innocent, whilst the Demon cowers indoors.",
         intro: `<ul><li>The Lycanthrope must choose an alive player each night. If the Lycanthrope chooses a dead player, the Storyteller shakes their head no and prompts the Lycanthrope to choose a different player.</li><li>If the player that the Lycanthrope chooses is good, that player dies, and the Demon can not kill tonight.</li><li>If the player the Lycanthrope attacks is evil, that player does not die, and the Demon may still kill tonight.</li><li>If the Lycanthrope attacks a good player but that good player doesn't die, the Demon may still kill tonight.</li><li>One good player registers as evil. They also register as evil to the Lycanthrope, so cannot be killed by the Lycanthrope.</li></ul>`,
         ability: "Each night*, choose an alive player. If good, they die & the Demon doesn't kill tonight. One good player registers as evil.",
@@ -1015,6 +1107,7 @@ let characters = [
     },
     {
         name: "Magician",
+        id:"magician",	
         description: "The Magician confuses the evil players about who is evil and who isn't.",
         intro: `<ul><li>On the first night, instead of learning which player is the Demon, the Minions are told that both players—the Demon and the Magician—are the Demon.</li><li>On the first night, the Demon learns that the Magician player is one of its Minions.</li><li>The Magician does not wake to learn anything.</li><li>The Storyteller can point to the Magician and the evil players in any order, so that the evil players won't know which player is the Magician.</li><li>If the Poppy Grower dies and the Demon and Minions learn who each other are mid-game, the Magician ability has an effect that night, just as if it was the first night.</li></ul>`,
         ability: 'The Demon thinks you are a Minion. Minions think you are a Demon.',
@@ -1026,6 +1119,7 @@ let characters = [
     },
     {
         name: "Nightwatchman",
+        id:"nightwatchman",	
         description: `The Nightwatchman is known by one player.`,
         intro: "",
         ability: 'Once per game, at night, choose a player: they learn you are the Nightwatchman.',
@@ -1037,6 +1131,7 @@ let characters = [
     },
     {
         name: "Noble",
+        id:"noble",	
         description: "The Noble learns that one of three players is evil.",
         intro: `<ul><li>The Noble learns their information on the first night only.</li><li>If a Noble is created mid-game, the Noble learns their information on their first night.</li><li>The Noble learns two good players and one evil player. They may not learn one good player and two evil players. They may not learn three evil players.</li></ul>`,
         ability: 'You start knowing 3 players, 1 and only 1 of which is evil.',
@@ -1048,6 +1143,7 @@ let characters = [
     },
     {
         name: "Pixie",
+        id:"pixie",	
         description: "The Pixie pretends to be the same character as someone else.",
         intro: `<ul><li>On the first night, the Pixie learns an in-play Townsfolk. The Storyteller chooses which Townsfolk this is. The Pixie does not learn which player is this character.</li><li>If the Pixie player pretends that they are this Townsfolk, they gain the ability of this Townsfolk when the Townsfolk dies. They could have spoken loudly about being the character for one day, or pretended to be the character each day this game, or accused the Townsfolk of being a liar—the Storyteller is the judge of whether or not the player was convincing, by "being mad that they are this character".</li><li>When the Townsfolk player dies, the Pixie does not learn this, and is not told that they have gained a new ability. They may learn this has happened if they wake at night and start gaining information, or are prompted to choose players.</li><li>If the player the Pixie learns about changes character then dies, the Pixie becomes the Townsfolk the Pixie learnt about, not the new character.</li></ul>`,
         ability: 'You start knowing 1 in-play Townsfolk. If you were mad that you were this character, you gain their ability when they die.',
@@ -1059,6 +1155,7 @@ let characters = [
     },
     {
         name: "Poppy Grower",
+        id:"poppygrower",	
         description: "The Poppy Grower prevents the evil players learning who each other are.",
         intro: `<ul><li>The Demon still learns three not-in-play characters that are safe to bluff as.</li><li>If the Poppy Grower dies, the Demon and Minions learn who each other are, as though it were the first night again.</li><li>If the Poppy Grower becomes drunk or poisoned, Demons and Minions do not suddenly learn who each other are. If the Poppy Grower is drunk or poisoned when they die, Demons and Minions do not learn who each other are, since the Poppy Grower has no ability that night.</li><li>An evil Traveller still learns which player is the Demon when that Traveller enters play.</li></ul>`,
         ability: 'Minions & Demons do not know each other. If you die, they learn who each other are that night.',
@@ -1070,6 +1167,7 @@ let characters = [
     },
     {
         name: "Preacher",
+        id:"preacher",	
         description: `The Preacher removes the Minion abilities of selected players.`,
         intro: "",
         ability: 'Each night, choose a player: a Minion, if chosen, learns this. All chosen Minions have no ability.',
@@ -1081,6 +1179,7 @@ let characters = [
     },
     {
         name: "Princess",
+        id:"princess",	
         description: `The Princess decides which player dies first.`,
         intro: "<ul><li>For the Princess ability to work, the player that the Princess nominated must be the one executed. Players executed but nominated by others don't count.</li><li>The executed player does not have to die for the Princess ability to work.</li><li>Exiles don't count for the Princess ability.</li><li>If the Princess is drunk during the day, then sober at night, they prevent the Demon from killing. If the Princess is sober during the day, but drunk at night, they do not.</li><li>At night, non-Demon kills happen as normal.</li><li>At night, the Demon still chooses a player to kill, but they do not die. Other parts of the Demon's ability, such as poisoning players, making false information, etc. happen as normal.</li><li>The Princess does not have to nominate on their 1st day.</li><li>If a Princess is created mid-game, and they nominated and executed a player on their 1st day, the Demon doesn't kill that night.</li></ul>",
         ability: 'On your 1st day, if you nominated & executed a player, the Demon doesn\'t kill tonight.',
@@ -1092,6 +1191,7 @@ let characters = [
     },
     {
         name: "Shugenja",
+        id:"shugenja",	
         description: `The Shugenja trusts players to their left, or to their right.`,
         intro: "<ul><li>The closest evil player is the player with the smallest number of steps from the Shugenja to the evil player.</li><li>If the evil players are 'equidistant', that means that the closest evil player clockwise is the same number of steps away from the Shugenja as the closest evil player anti-clockwise.</li><li>If the evil players are equidistant, the storyteller gives 'arbitrary' information to the Shugenja. This means that the Storyteller chooses whether to tell the Shugenja that the closest evil player is clockwise or anti-clockwise.</li><li>The Shugenja doesn't know whether their information is arbitrary or not.</li><li>The Shugenja does not learn how many steps away the evil player is.</li><li>If a Shugenja is created mid-game, the Shugenja wakes that night to receive their information.</li><li>The Storyteller communicates with the Shugenja by pointing a finger in the appropriate direction, but may use other methods if they wish.</li></ul>",
         ability: 'You start knowing if your closest evil player is clockwise or anti-clockwise. If equidistant, this info is arbitrary.',
@@ -1103,6 +1203,7 @@ let characters = [
     },
     {
         name: "Steward",
+        id:"steward",	
         description: `The Steward knows 1 good player.`,
         intro: "<ul><li>The Steward learns a player, but not their character.</li><li>The Steward learns their information on the first night of the game.</li><li>If created mid-game, then the Steward learns their information that night instead.</li></ul>",
         ability: 'You start knowing 1 good player.',
@@ -1114,6 +1215,7 @@ let characters = [
     },
     {
         name: "Village Idiot",
+        id:"villageidiot",	
         description: `The Village Idiots are a group that learn players' alignments.`,
         intro: "<ul><li>The Village Idiot that is drunk is chosen by the Storyteller during the game setup.</li><li>There may be one, two, or three Village Idiots in play, irrespective of the number of players.</li><li>If there is only one Village Idiot in play, they are sober.</li><li>The drunk Village Idiot may get true information.</li><li>When Village Idiots are added to the game during setup, they replace other Townsfolk.</li><li>If a Village Idiot is created mid-game, only one is created.</li><li>Village Idiots act one at a time, not all together.</li><li>If all sober Village Idiots exit play, the remaining drunk Village Idiot remains drunk.</li><li>If a sober Village Idiot becomes drunk or poisoned by other means, the drunk Village Idiot remains drunk.</li></ul>",
         ability: 'Each night, choose a player: you learn their alignment. [+0 to +2 Village Idiots. 1 of the extras is drunk]',
@@ -1125,6 +1227,7 @@ let characters = [
     },
     {
         name: "Damsel",
+        id:"damsel",	
         description: "The Damsel needs to avoid being found by the Minions.",
         intro: `<ul><li>If a Minion guesses that you are the Damsel, and does so publicly <i>(so that all players know that they are a Minion)</i>, evil wins.</li><li>No matter how many Minions are in play, they only get one guess, total. If a Minion makes a guess and is wrong, future guesses by this Minion or by other Minions don't count.</li><li>If the Demon pretends to be a Minion making a guess, that doesn't count as a guess. Minions may still make a guess and win.</li><li>Minions may make a guess at any time.</li><li>If the Damsel dies, they are no longer at risk of being guessed by a Minion, since the Damsel loses their ability when dead.</li><li>There may not be a Huntsman in play. But if there is, and the Huntsman chooses the Damsel at night, the Damsel becomes a not-in-play Townsfolk, and is no longer the Damsel. The Damsel learns which Townsfolk and has that Townsfolk ability from then on.</li></ul>`,
         ability: 'All Minions know a Damsel is in play. If a Minion publicly guesses you (once), your team loses.',
@@ -1136,6 +1239,7 @@ let characters = [
     },
     {
         name: "Golem",
+        id:"golem",	
         description: "The Golem kills the player they nominate.",
         intro: `<ul><li>When the Golem nominates a player, that player immediately dies. The nomination process continues.</li><li>If the Golem nominates the Demon, nothing happens. The Storyteller doesn't confirm or deny that the Golem nominated, and continues with the voting process as normal. The Storyteller may say "nothing happens" if clarity is asked for.</li><li>After the Golem has nominated once, whether or not the nominee dies, the Golem may not nominate again this game. It is the player's responsibility to refrain from nominating, not the Storyteller's. Deliberately nominating when they shouldn't is considered cheating.</li></ul>`,
         ability: 'You may only nominate once per game. When you do, if the nominee is not the Demon, they die.',
@@ -1147,6 +1251,7 @@ let characters = [
     },
     {
         name: "Hatter",
+        id:"hatter",	
         description: "The Hatter allows the evil players to change characters.",
         intro: `<ul><li>Each evil player may choose to become any character of the same type as their current character.</li><li>They may choose not to change characters.</li><li>If a player becomes a new character, they gain the new ability, even if it was a "you start knowing" ability or a once per game ability that had already been used.</li><li>Once a player has changed character, their previous character ability has no further effect on the game.</li><li>If a player dies then becomes the Hatter, the evil players do not change characters tonight.</li><li>Once a character has been chosen, a second player cannot choose the same character. If it is already in play, the player with that character must choose a new character.</li></ul>`,
         ability: 'If you died today or tonight, the Minion & Demon players may choose new Minion & Demon characters to be.',
@@ -1158,6 +1263,7 @@ let characters = [
     },
     {
         name: "Heretic",
+        id:"heretic",	
         description: "The Heretic turns a win into a loss, and a loss into a win.",
         intro: `<ul><li>If the game ends due to the good team winning, then all good players lose, and all evil players win.</li><li>If the game ends due to the evil team winning, then all evil players lose, and all good players win.</li><li>This Heretic's ability applies to all victory conditions, including the game ending due to just two players being alive, the Demon dying, or an ability ending the game.</li><li>The Heretic's ability functions even when the Heretic is dead, but not when the Heretic is drunk or poisoned.</li></ul>`,
         ability: 'Whoever wins, loses & whoever loses, wins, even if you are dead.',
@@ -1169,6 +1275,7 @@ let characters = [
     },
     {
         name: "Hermit",
+        id:"hermit",	
         description: "The Hermit isn't really here.",
         intro: `<ul><li>The Hermit has the abilities of all the other Outsiders on the Script, all at once. They do not have the abilities of Outsiders that are not on the script.</li><li>If a custom script has more than 4 Outsiders, the Hermit has all these Outsider abilities.</li><li>If one of the Outsider abilities continues after death, such as the Recluse's, the Hermit keeps that ability when they die, but does not keep their other Outsider abilities.</li><li>A Hermit with the Drunk ability does not know that they are the Hermit, and their other Outsider abilities function as normal. A Hermit with the Recluse ability can register as a different character etc.</li><li>If an Outsider has a jinx, that jinx applies to the Hermit too.</li><li>The Hermit may remove the Hermit from play during setup, resulting in one less Outsider than normal. If this happens, the Hermit may still be a bluff given to the Demon.</li></ul>`,
         ability: 'You have all Outsider abilities. [-0 or -1 Outsiders]',
@@ -1180,6 +1287,7 @@ let characters = [
     },
     {
         name: "Ogre",
+        id:"ogre",	
         description: "The Ogre is someone's best friend.",
         intro: `<ul><li>The Ogre's chosen player does not change, even if the Ogre is drunk or poisoned when they chose.</li><li>The Ogre becomes the same alignment as their chosen player immediately on the first night, even if the Ogre is drunk or poisoned.</li><li>The Ogre is not told their alignment at the beginning of the game.</li><li>If the Ogre changes alignment by other means, the Ogre learns their new alignment, as normal.</li><li>If an Ogre is created mid-game, the Ogre chooses a player that night, and becomes their alignment.</li></ul>`,
         ability: "On your 1st night, choose a player (not yourself): you become their alignment (you don't know which) even if drunk or poisoned.",
@@ -1191,6 +1299,7 @@ let characters = [
     },
     {
         name: "Plague Doctor",
+        id:"plaguedoctor",	
         description: "The Plague Doctor brings an extra Minion ability into play.",
         intro: `<ul><li>The Storyteller chooses which Minion ability is gained.</li><li>This ability is in effect for the rest of the game.</li><li>Nothing else changes for the Storyteller - they don't become evil, they don't become a player, they are not a legitimate player to be targeted by other abilities, and they cannot vote or nominate.</li><li>If all Minions are in play, the Storyteller can gain an in-play Minion ability.</li><li>If the Plague Doctor is drunk or poisoned when they die, the Storyteller doesn't gain a Minion ability, even when the Plague Doctor becomes sober and healthy.</li></ul>`,
         ability: 'When you die, the Storyteller gains a Minion ability.',
@@ -1202,6 +1311,7 @@ let characters = [
     },
     {
         name: "Politician",
+        id:"politician",	
         description: `The Politician changes teams if they are losing.`,
         intro: "",
         ability: 'If you were the player most responsible for your team losing, you change alignment & win, even if dead.',
@@ -1213,6 +1323,7 @@ let characters = [
     },
     {
         name: "Puzzlemaster",
+        id:"puzzlemaster",	
         description: "The Puzzlemaster tries to figure out who is drunk.",
         intro: "<ul><li>A player is drunk for the whole game. It will most often be a Townsfolk, but could be an Outsider. This player does not know that they are drunk.</li><li>Once per game, the Puzzlemaster may guess which player it is. They may guess publicly, or privately. Whatever their guess, the Storyteller privately tells the Puzzlemaster the name of one player. If the Puzzlemaster guessed correctly, they learn which player the Demon is. If the Puzzlemaster guessed incorrectly, they learn a different player instead.</li><li>The Puzzlemaster isn't told if they guessed correctly or not.</li><li>Only the player made drunk by the Puzzlemaster counts as a successful guess. Players drunk by other means don't count.</li><li>If the Puzzlemaster dies, the drunk player is still drunk. A dead Puzzlemaster may not make a guess, as they don't have that part of their ability.</li></ul>",
         ability: '1 player is drunk, even if you die. If you guess (once) who it is, learn the Demon player, but guess wrong & get false info.',
@@ -1224,6 +1335,7 @@ let characters = [
     },
     {
         name: "Snitch",
+        id:"snitch",	
         description: "The Snitch gives information to the evil team.",
         intro: `<ul><li>The Minions learn three not-in-play characters at the start of the game, just like the Demon does.</li><li>These characters may be the same three that the Demon learns, or different characters.</li><li>Each Minion may learn different characters to each other. Or they may all learn the same three characters.</li></ul>`,
         ability: 'Each Minion gets 3 bluffs.',
@@ -1235,6 +1347,7 @@ let characters = [
     },
     {
         name: "Zealot",
+        id:"zealot",	
         description: "The Zealot votes.",
         intro: `<ul><li>If there are 5 or more players alive, the Zealot must vote for every nomination. If there are 4 or fewer players alive, the Zealot can choose whether they vote or not.</li><li>Travellers count as alive players.</li><li>The Zealot can vote like a normal dead player when dead.</li><li>The Zealot does not need to vote for exiles.</li><li>A Zealot must vote even if they think they might be drunk or poisoned.</li><li>It is not the Storyteller's responsibility to monitor the Zealot. They're responsible for their own voting. Deliberately not voting when they should is considered cheating.</li></ul>`,
         ability: 'Each day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.',
@@ -1246,6 +1359,7 @@ let characters = [
     },
     {
         name: "Boffin",
+        id:"boffin",	
         description: "The Boffin replicates a good ability.",
         intro: `<ul><li>While the Boffin is alive, the Demon has a single Townsfolk ability or Outsider ability.</li><li>If the Demon is drunk or poisoned, the Demon keeps this good ability. If the Boffin is drunk or poisoned, the Demon temporarily loses this good ability.</li><li>If the Demon dies and has an ability that functions while dead, such as the Sweetheart, the Demon keeps this ability.</li><li>If a new Demon is created, such as via a Scarlet Woman or a Barber, this new Demon has an ability from the Boffin. This ability may be different to the previous Demon's ability.</li><li>If there are multiple Demons alive, only one alive Demon has an ability from the Boffin.</li><li>If the Demon has an ability that modifies the setup, such as a Choirboy, these changes are made during setup, as normal.</li><li>Both the Demon and the Boffin learn which good ability the Demon has. The Storyteller may wake these players independently, or together.</li><li>The not-in-play character may be 1 of the Demon's 3 bluffs.</li><li>The Demon also wakes at night at the time that the <strong>good</strong> character would normally wake.</li></ul>`,
         ability: "The Demon (even if drunk or poisoned) has a not-in-play good character's ability. You both know which.",
@@ -1257,6 +1371,7 @@ let characters = [
     },
     {
         name: "Boomdandy",
+        id:"boomdandy",	
         description: "The Boomdandy explodes when executed, killing most other players.",
         intro: `<ul><li>If the Boomdandy is executed, the Storyteller kills other players, one at a time, until only three are left alive.</li><li>The Demon will be one of the remaining three players <i>(otherwise, the game would be over)</i>.</li><li>The players have a short countdown to decide who to kill next. There is no further nomination or execution today. Instead, all players point at the player they want to die. When countdown ends, the Storyteller counts the number of fingers pointed at each player. If it is a tie, then night falls <i>(and evil probably wins due to the Demon killing that night)</i>.</li><li>Even dead players who have no vote token may point.</li><li>Players may change who they are pointing at up until the countdown is over, at which point their decision is final.</li><li>The Boomdandy only explodes due to an execution. Deaths by other means, such as via a Golem or a Psychopath, don't count. If the Boomdandy is executed but doesn't die <i>(due to a Devil's Advocate etc.)</i>, they still explode.</li><li>If a character can't die, such as the Fool or the Sailor, the Storyteller may rule that four players remain alive after a Boomdandy explosion.</li></ul>`,
         ability: 'If you are executed, all but 3 players die. After a 10 to 1 countdown, the player with the most players pointing at them, dies.',
@@ -1268,6 +1383,7 @@ let characters = [
     },
     {
         name: "Fearmonger",
+        id:"fearmonger",	
         description: "The Fearmonger creates paranoia about who nominates whom.",
         intro: `<ul><li>During the first night, when the Fearmonger selects a player, all players learn this.</li><li>During other nights, each time the Fearmonger selects a new player, all players learn this. If the Fearmonger selects the same player as previously, the players learn nothing.</li><li>The players only learn that the Fearmonger has acted, not which player was selected.</li><li>If the Fearmonger nominates their chosen player, and that nomination results in their execution, the chosen player loses, their team loses, and the game ends.</li><li>Only the currently chosen player is susceptible to the Fearmonger's ability. Previously chosen players don't count.</li><li>If the chosen player is executed but does not die, the chosen player's team still loses.</li></ul>`,
         ability: 'Each night, choose a player: if you nominate & execute them, their team loses. All players know if you choose a new player.',
@@ -1279,6 +1395,7 @@ let characters = [
     },
     {
         name: "Goblin",
+        id:"goblin",	
         description: `The Goblin takes revenge if the town knowingly executes them.`,
         intro: "<ul><li>If the Goblin is executed, evil wins.</li><li>...but for this to happen the Goblin needs to tell the group that they are the Goblin when they are nominated, but before votes happen, and to do so in a way that everyone hears. The good players need to know the risk.</li><li>If the Goblin is executed without telling the group that they are the Goblin when nominated, the Goblin dies and the game continues as normal.</li><li>The Goblin must have claimed to be the Goblin today for their ability to work. Telling the group yesterday, or even every previous day, doesn't count.</li><li>Any player may claim to be the Goblin when nominated.</li></ul>",
         ability: 'If you publicly claim to be the Goblin when nominated & are executed that day, your team wins.',
@@ -1290,6 +1407,7 @@ let characters = [
     },
     {
         name: "Harpy",
+        id:"harpy",	
         description: `The Harpy creates discord and distrust between good players.`,
         intro: "<ul><li>At night, the Harpy player chooses one player at a time, not two at once.</li><li>A player chosen by the Harpy is affected by the ability until the next Harpy choice.</li><li>If the Storyteller decides to kill players with the Harpy ability, they must kill both. The Storyteller can not decide to kill only one.</li><li>The Harpy can choose a dead player. If so, the Storyteller can kill just the living player, since dead players can not die again.</li><li>The order of deaths due to the Harpy ability can be chosen by the Storyteller, should that be important.</li></ul>",
         ability: 'Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or one or both might die.',
@@ -1301,6 +1419,7 @@ let characters = [
     },
     {
         name: "Marionette",
+        id:"marionette",	
         description: "The Marionette doesn't know that they are a Minion.",
         intro: `<ul><li>The Marionette draws either a Townsfolk or an Outsider token from the bag, but is secretly the Marionette.</li><li>The Marionette neighbors the Demon. There are no players sitting in between the Marionette and the Demon.</li><li>The Demon knows which player is the Marionette.</li><li>On the first night, the Marionette does not wake to learn the other evil players, and the other Minions do not learn the Marionette.</li><li>The good ability that the Marionette thinks they have, doesn't work, but the Storyteller pretends it does. It is just as if this player is the Drunk.</li><li>The Marionette registers as evil, and as a Minion.</li></ul>`,
         ability: 'You think you are a good character, but you are not. The Demon knows who you are. [You neighbor the Demon]',
@@ -1312,6 +1431,7 @@ let characters = [
     },
     {
         name: "Mezepheles",
+        id:"mezepheles",	
         description: "The Mezepheles offers good players a choice: to turn evil or not.",
         intro: `<ul><li>On the first night, the Mezepheles learns a secret word from the Storyteller.</li><li>If a good player says this word, either publicly or privately, they turn evil that night. The Storyteller needs to hear this player actually say the word before turning them evil.</li><li>The Mezepheles does not learn if a player turns evil. The good player learns if they turn evil, but not until that night.</li><li>If the Mezepheles is sober and healthy at night, the good player turns evil even if the Mezepheles was drunk or poisoned when the good player spoke the secret word. If the Mezepheles is drunk or poisoned at night when a player would turn evil, the player stays good—the Mezepheles has "used their ability" and may not turn a player evil later on.</li></ul>`,
         ability: 'You start knowing a secret word. The 1st good player to say this word becomes evil that night.',
@@ -1323,6 +1443,7 @@ let characters = [
     },
     {
         name: "Organ Grinder",
+        id:"organgrinder",	
         description: "The Organ Grinder makes voting secret.",
         intro: `<ul><li>When a player is nominated, players vote with eyes closed.</li><li>The Storyteller does not count the votes out loud, and does not reveal how many players voted once voting is complete.</li><li>The Storyteller does not reveal which player is "about to die".</li><li>After nominations have closed, the Storyteller reveals which player is executed, as normal.</li><li>Dead players may vote once if they have a vote token. Their vote token is removed at the end of the day instead of after the vote.</li></ul>`,
         ability: 'All players keep their eyes closed when voting and the vote tally is secret. Each night, choose if you are drunk or not.',
@@ -1334,6 +1455,7 @@ let characters = [
     },
     {
         name: "Psychopath",
+        id:"psychopath",	
         description: "The Psychopath kills in broad daylight.",
         intro: `<ul><li>During the day, if the Psychopath declares that they are the Psychopath and publicly chooses a player, that player dies. This can only be done once per day, and only before the Storyteller has called for nominations.</li><li>The Psychopath does not need to use this ability if they don't want to.</li><li>The Psychopath can be nominated and voted for normally. If the Psychopath is executed, they might not die. They play Roshambo <i>(Paper-Rock-Scissors)</i> with the player that nominated them. The nominator needs to win for the Psychopath to die. Drawing or losing means the Psychopath lives.</li><li>If the Psychopath is executed, this still counts as the one execution for the day. No more players may be nominated or executed today.</li><li>If the Psychopath dies by other means, such as the Demon attacking them, they do not play Roshambo. They die.</li></ul>`,
         ability: 'Each day, before nominations, you may publicly choose a player: they die. If executed, you only die if you lose roshambo.',
@@ -1345,6 +1467,7 @@ let characters = [
     },
     {
         name: "Summoner",
+        id:"summoner",	
         description: "The Summoner creates a Demon.",
         intro: `<ul><li>The Summoner may choose any player to become the Demon, even themselves.</li><li>The new Demon does not learn which players are Minions, or vice versa. The evil players will need to talk amongst themselves to figure this out.</li><li>Even though there is no Demon in play for two days, the game does not end. However, if the Summoner becomes unable to create a Demon (due to dying, becoming drunk on night 3 etc.) good wins.</li><li>The newly created Demon acts on the same night that it is created.</li></ul>`,
         ability: 'You get 3 bluffs. On the 3rd night, choose a player: they become an evil Demon of your choice. [No Demon]',
@@ -1356,6 +1479,7 @@ let characters = [
     },
     {
         name: "Vizier",
+        id:"vizier",	
         description: `The Vizier executes players without the town's consent.`,
         intro: "<ul><li>On the first day, all players learn that the Vizier is in play, and which player it is.</li><li>During the day, the Vizier can not die by any means.</li><li>After a vote is tallied, if the Vizier chooses to execute the nominee (and at least one good player voted), they are executed immediately. This counts as the 1 execution allowed each day.</li><li>After a vote is tallied, if the Vizier chooses to execute the nominee (and no good players voted), nothing happens.</li><li>Even if the vote tally is less than 50% of the living players, the Vizier may still execute. Even if another player has more votes than the current player, the Vizier may still execute.</li><li>The Vizier does not have to force an execution each day.</li></ul>",
         ability: 'All players know you are the Vizier. You can not die during the day. If good voted, you may choose to execute immediately.',
@@ -1367,6 +1491,7 @@ let characters = [
     },
     {
         name: "Widow",
+        id:"widow",	
         description: `The Widow knows all characters and poisons the exact person they think is most useful.`,
         intro: "",
         ability: 'On your first night, look at the Grimoire & choose a player: they are poisoned. 1 good player knows a Widow is in play.',
@@ -1378,6 +1503,7 @@ let characters = [
     },
     {
         name: "Wizard",
+        id:"wizard",	
         description: `The Wizard makes a wish.`,
         intro: "<ul><li>This wish is limited only by the player's imagination. It can be anything at all. The Wizard can write their wish on their phone and wake at night to show the Storyteller, or talk with the Storyteller in private during the day. The Wizard could even make a wish publicly if they are feeling foolish.</li><li>If the Storyteller tells the group that the Wizard has made a wish, they need not do so immediately, and can do so at any point later on.</li><li>Many wishes have a price. The price changes the game in some way, or changes the wish in some way. It can be anything at all, and is decided by the Storyteller. The Storyteller may or may not tell the Wizard what the price is. The purpose of the price is to rebalance a wish that is unfair for the good team on a mechanical level.</li><li>Many wishes leave a clue. The clue can be anything at all, is decided by the Storyteller, and is declared publicly. The purpose of a clue is to rebalance a wish that is unfair to the good team on an informational level.</li><li>When the Wizard dies, the wish may or may not still be in effect, depending on the nature of the wish and the nature of the price.</li><li>If the Wizard makes a wish that the Storyteller doesn't understand, or feels like it would be impossible to implement, the Storyteller may ask the Wizard to wish again, or cancel the wish.</li></ul>",
         ability: 'Once per game, choose to make a wish. If granted, it might have a price & leave a clue as to its nature.',
@@ -1389,6 +1515,7 @@ let characters = [
     },
     {
         name: "Wraith",
+        id:"wraith",	
         description: `The Wraith knows and shares what happens at night.`,
         intro: "<ul><li>The Wraith may open their eyes at any point during the night, for as long or as short a time as they wish.</li><li>They may open their eyes fully, or just peek.</li><li>The Storyteller wakes the Wraith when other evil players also wake, such as when the Demon kills a player, an evil Traveller uses their ability, or a Cult Leader learns that they are evil.</li><li>When several players have their eyes open at once, they may communicate if they wish.</li><li>If a good player catches the Wraith with their eyes open, there is no mechanical effect.</li><li>A dead Wraith may not open their eyes at night. A drunk or poisoned Wraith is told by the Storyteller that they may not open their eyes that night.</li></ul>",
         ability: 'You may choose to open your eyes at night. You wake when other evil players do.',
@@ -1400,6 +1527,7 @@ let characters = [
     },
     {
         name: "Xaan",
+        id:"xaan",	
         description: `The Xaan poisons all Townsfolk.`,
         intro: "<ul><li>The Xaan poisons all Townsfolk players for one night then one day. The night that this happens equals the number of Outsiders in play. For example, if there are 2 Outsiders, the Xaan poisons on night 2.</li><li>There can be any number of Outsiders in play, but usually 1 to 4. This can be the normal number of Outsiders if the Xaan was not in play, or something different. This overrides other characters that add or remove Outsiders, such as the Baron.</li><li>If the number of Outsiders changes during the game, the Xaan poisons on the night corresponding to the number of Outsiders during setup.</li><li>The Xaan needs to be alive in order to poison.</li></ul>",
         ability: 'On night X, all Townsfolk are poisoned until dusk. [X Outsiders]',
@@ -1411,6 +1539,7 @@ let characters = [
     },
     {
         name: "Al-Hadikhia",
+        id:"alhadikhia",	
         description: "The Al-Hadikhia puts three players in a dilemma—who will choose to die, so that others can live?",
         intro: "<ul><li>The Al-Hadikhia chooses three players per night. Everyone learns which three were chosen. Each player makes their choice before the next player is revealed.</li><li>All players must be silent when the Al-Hadikhia acts at night. This period lasts from when the Storyteller first declares that a player has been chosen, until the Storyteller says that it ends.</li><li>At night, the Storyteller asks players out loud if they choose to live. If they nod their head, they live. If they shake their head, they die. Players may be brought back to life this way.</li><li>If all players choose to live, then they all die instead. If a player chose to die but did not die, they count as alive for this calculation.</li></ul>",
         ability: 'Each night*, you may choose 3 players (all players learn who): each silently chooses to live or die, but if all live, all die.',
@@ -1422,6 +1551,7 @@ let characters = [
     },
     {
         name: "Kazali",
+        id:"kazali",	
         description: `The Kazali chooses their own Minions.`,
         intro: "<ul><li>If a Kazali is created mid game, the Kazali does not choose new Minion players.</li><li>The Storyteller can give the Minions' original good characters as bluffs to the Demon, since they are not in play.</li><li>The Kazali acts at a time that is technically both during setup and during the first night.</li><li>The Storyteller may keep the Kazali awake, or put the Kazali to sleep, when waking the Minions to tell them which Minion that they are.</li><li>Only Minions that are on the script may be chosen. Duplicate Minion characters are not allowed.</li></ul>",
         ability: 'Each night*, choose a player: they die. [You choose which players are which Minions. -? to +? Outsiders]',
@@ -1433,6 +1563,7 @@ let characters = [
     },
     {
         name: "Legion",
+        id:"legion",	
         description: "Legion is many Demons.",
         intro: `<ul><li>The recommended number of good and evil players is the reverse of the normal. For example, for a ten player game, there are roughly seven Legion and three good players.</li><li>The players that are not Legion may be Townsfolk or Outsiders, in any combination.</li><li>If at least one good player voted for the nomination, and that player is "about to die", then the execution happens as normal. If only evil players vote for a nomination, the vote tally for that nominee is zero.</li><li>Each Legion registers as a Minion as well as a Demon.</li><li>The Storyteller chooses which player dies at night.</li><li>If only one good player remains alive, the Storyteller may declare that evil wins, since good cannot win.</li><li>The Storyteller can decide not to give Legion players bluffs.</li></ul>`,
         ability: 'Each night*, a player might die. Executions fail if only evil voted. You register as a Minion too. [Most players are Legion]',
@@ -1444,6 +1575,7 @@ let characters = [
     },
     {
         name: "Leviathan",
+        id:"leviathan",	
         description: "The Leviathan doesn't kill.",
         intro: `<ul><li>All players know the Leviathan is in play, even if the Leviathan is created mid-game.</li><li>Any number of evil players may be executed, but if more than one good player is executed, evil wins. It doesn't matter which characters were executed, only the alignment of the player at the time they were executed.</li><li>When the fifth day ends and night begins, if the Leviathan is still alive, evil wins.</li><li>All types of execution count, even if the player doesn't die. A player executed due to the Virgin, or due to revealing that they are the Mutant, is still executed. An executed player who lives due to the Pacifist is still executed.</li></ul>`,
         ability: 'If more than 1 good player is executed, evil wins. All players know you are in play. After day 5, evil wins.',
@@ -1455,6 +1587,7 @@ let characters = [
     },
     {
         name: "Lil' Monsta",
+        id:"lilmonsta",	
         description: `Lil' Monsta isn't a player, and is instead babysat by a Minion.`,
         intro: "",
         ability: "Each night, Minions choose who babysits Lil' Monsta & 'is the Demon'. Each night*, a player might die. [+1 Minion]",
@@ -1465,6 +1598,7 @@ let characters = [
     },
     {
         name: "Lleech",
+        id:"lleech",	
         description: "The Lleech lives if their host lives, and dies if their host dies.",
         intro: `<ul><li>On the first night, the Lleech chooses a player, who is poisoned for the rest of the game.</li><li>If this player is alive, the Lleech cannot die. If the Lleech is executed, the Storyteller tells the group that the player lives, but not why.</li><li>If the player that the Lleech chose dies, the Lleech dies as well. If this means that only one or two players are left alive, good still wins, because the Demon is dead.</li><li>From the second night onwards, players that the Lleech attacks die but are not poisoned.</li><li>If a Lleech is created mid-game, they poison a player that night. They must choose an alive player.</li></ul>`,
         ability: 'Each night*, choose a player: they die. You start by choosing a player: they are poisoned. You die if & only if they are dead.',
@@ -1476,6 +1610,7 @@ let characters = [
     },
     {
         name: "Lord of Typhon",
+        id:"lordoftyphon",	
         description: "The Lord Of Typhon is surrounded by Minions.",
         intro: `<ul><li>All evil characters sit next to each other in a continuous line. All evil characters (including Travellers and evil Townsfolk) must be in the line at setup.</li><li>If Lord Of Typhon is on the script, the Storyteller decides where Travellers sit, even if the Lord of Typhon is not in play.</li><li>The Lord Of Typhon must have an evil character on both sides. They cannot sit at the end of the line of evil characters.</li><li>The evil team starts with one additional Minion.</li><li>Any number of Outsiders might be in play.</li><li>Like the Marionette, the Storyteller decides which players are Minions during setup. The Storyteller also decides which player is which Minion.</li><li>If a Lord Of Typhon is created mid game, the Lord Of Typhon does not need to sit in a line with the evil characters.</li></ul>`,
         ability: 'Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? to +? Outsiders]',
@@ -1487,6 +1622,7 @@ let characters = [
     },
     {
         name: "Ojo",
+        id:"ojo",	
         description: "The Ojo chooses specifically which character dies.",
         intro: `<ul><li>Unlike other Demons, the Ojo must choose a character, not a player. The Storyteller may need to remind the player of this. We recommend that all players have their character sheet handy during the night phase.</li><li>The Ojo can kill evil characters, if they wish.</li><li>If there are multiple copies of a particular character in play, and the Ojo chooses that character to die, only one of those characters dies.</li><li>If the Ojo chooses a character that is not in play, the Storyteller will almost always kill a living good player. It is possible, but uncommon, for the Storyteller to choose a dead player or an evil player to die.</li></ul>`,
         ability: 'Each night*, choose a character: they die. If they are not in play, the Storyteller chooses who dies.',
@@ -1498,6 +1634,7 @@ let characters = [
     },
     {
         name: "Riot",
+        id:"riot",	
         description: "Riot kills everybody in a panic.",
         intro: `<ul><li>Each player that is nominated dies immediately. Even though they are dead, they may nominate again today. This may happen multiple times per day.</li><li>The player that was nominated must nominate again immediately or lose their chance to do so. The Storyteller counts down "3... 2... 1..." to let the player know how long they have to nominate, should they wish to. If they don't, no more nominations are allowed today.</li><li>The good team wins if all Riot players are dead. If the last Riot dies and only two players are alive, they do not nominate, and the good team wins.</li><li>On the third day, each nominated player must nominate again. If they do not, the Storyteller will nominate on their behalf, or declare that that player's team loses.</li><li>If just three players are alive when the third day nominations begin, the group chooses which player nominates first. If no one nominates, the day ends and evil wins.</li></ul>`,
         ability: 'On day 3, Minions become Riot & nominees die but nominate an alive player immediately. This must happen.',
@@ -1509,6 +1646,7 @@ let characters = [
     },
     {
         name: "Yaggababble",
+        id:"yaggababble",	
         description: "The Yaggababble kills by talking.",
         intro: `<ul><li>The phrase that the Yaggababble says can be any length, but is usually 2 to 5 words long.</li><li>If the Yaggababble says this phrase, the Storyteller may kill a player any time afterwards, until dawn.</li><li>The Yaggababble may say this phrase as a standalone sentence, or part of another sentence.</li><li>The Yaggababble may say this phrase multiple times per day. If so, the Storyteller may kill multiple players.</li><li>The Storyteller chooses which players die.</li><li>The Storyteller may choose to kill fewer players than the number of times the phrase was said.</li><li>If the Yaggababble is drunk or poisoned, players cannot die, even if the Yaggababble was sober and healthy when they said their phrase. If the Yaggababble is sober and healthy, players might die, even if the Yaggababble was drunk or poisoned when they said their phrase.</li><li>It is rare for the Yaggababble to kill during the day.</li></ul>`,
         ability: 'You start knowing a secret phrase. For each time you said it publicly today, a player might die.',
@@ -1520,6 +1658,7 @@ let characters = [
     },
     {
         name: "Thief",
+        id:"thief",	
         description: "The thief steals votes from a player, making their vote count negatively.",
         intro: `<ul><li>When a player chosen by the Thief votes, the vote tally goes down by one instead of up by one. This happens every time that player votes that day</li><li>The player with the negative vote changes back to having a positive vote immediately if the Thief dies, including if the Thief is exiled, because the Thief loses their ability.</li><li>Exiles are never affected by abilities, so the player with the negative vote can support exiles unaffected by the Thief's ability.</li><li>Since the Storyteller counts the number of votes out loud as they move their hand around the circle, all players will know which player the Thief chose.</li></ul>`,
         ability: 'Each night, choose a player (not yourself): their vote counts negatively tomorrow.',
@@ -1531,6 +1670,7 @@ let characters = [
     },
     {
         name: "Bureaucrat",
+        id:"bureaucrat",	
         description: "The Bureaucrat gives extra votes to a player of their choice.",
         intro: `<ul><li>When a player chosen by the Bureaucrat votes, that vote counts as three votes. This happens every time that player votes that day.</li><li>The player with the triple vote loses it immediately if the Bureaucrat dies, including if the Bureaucrat is exiled, because the Bureaucrat loses their ability.</li><li>Exiles are never affected by abilities, so the player with the triple vote can only support exiles once, not three times.</li><li>Since the Storyteller counts the number of votes out loud as they move their hand around the circle, all players will know which player the Bureaucrat chose.</ul>`,
         ability: 'Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow.',
@@ -1544,6 +1684,7 @@ let characters = [
     },
     {
         name: "Gunslinger",
+        id:"gunslinger",	
         description: "The Gunslinger kills players who vote.",
         intro: `<ul><li>Each day, after the first vote for execution has been tallied,
         the Gunslinger may publicly choose a player that just voted
@@ -1564,6 +1705,7 @@ let characters = [
     },
     {
         name: "Scapegoat",
+        id:"scapegoat",	
         description: "The Scapegoat is executed instead of an ally.",
         intro: `<ul><li>If the Scapegoat is evil, they might die instead of an evil player
         dying. If the Scapegoat is good, they might die instead of a good player dying. When exactly this happens is up to the Storyteller. This can only happen due to an execution, not death by other means such as a Demon or Slayer.</li><li>The Scapegoat being killed still counts as an execution, so no more nominations occur today.</li><li>As always, players do not learn the alignment of the Scapegoat when they die.</li></ul>`,
@@ -1578,6 +1720,7 @@ let characters = [
     },
     {
         name: "Beggar",
+        id:"beggar",	
         description: "The Beggar cannot vote unless someone gives them a token.",
         intro: `<ul><li>The Beggar cannot raise their hand to vote at all unless they
         have a vote token.</li><li>When they do vote, they lose one vote token. If they have more than one, they may only use one at a time.</li><li>Only a dead player may give their vote token to the Beggar, after which that dead player cannot vote. Each dead player decides for themself whether to give the Beggar their vote token. No one, including the Beggar, may move a player's vote token on their behalf.</li><li>When a player gives their vote token to the Beggar, the Beggar learns whether that player is good or evil.</li><li>The Beggar can still nominate freely, and can still vote for an exile freely, because exiles are not affected by abilities.</li><li>If the Beggar dies, they gain one vote token to use while dead, just like any other character would. However, the Beggar loses all their previously acquired vote tokens.</li><li>If the Beggar would become drunk or poisoned, they do not.</li><li>The ability to donate vote tokens is unique to the Beggar ability. Players may not give their vote token to a player that is
@@ -1593,6 +1736,7 @@ let characters = [
     },
     {
         name: "Apprentice",
+        id:"apprentice",	
         description: "The Apprentice has either a Townsfolk or a Minion ability.",
         intro: `<ul><li>A good Apprentice gains a Townsfolk ability. An evil Apprentice gains a Minion ability. They have this ability until they die.</li><li>The Apprentice learns their ability on their first night,
         and they may act that night if the character whose ability they gain would do so.</li><li>Only abilities listed on the character sheet may be gained.</li><li>If the Apprentice gains an ability that normally only functions on the first night of the game, such as the Grandmother's, it functions on the Apprentice's first night instead.</li><li>The Apprentice does not literally become the character whose ability they gain. They are the Apprentice, a Traveller, so they may be exiled but not executed, and they do not count toward the number of alive players to see if evil wins due to just two players being alive. Also, other characters' abilities that detect characters would detect the Apprentice as the Apprentice.</li></ul>`,
@@ -1606,6 +1750,7 @@ let characters = [
     },
     {
         name: "Matron",
+        id:"matron",	
         description: "The Matron chooses where players sit.",
         intro: `<ul><li>The Matron may swap two players' seating positions, up to three times per day. The new seating order is permanent, unless changed again by the Matron.</li><li>The same player may be moved multiple times.</li><li>Some players may find moving difficult due to a physical disability or impediment. In these cases, they are immune to the Matron's ability and can stay put.</li><li>With the Matron in play, players may not talk privately except with their immediate neighbors while sitting down.
         Players may not leave their seat to whisper something to any player, and may not even talk about the game to each other when going to the bathroom, and so on. Players should self-police this.</li><li>If the Matron swaps just one or two sets of players, they may not swap another set of players later that day.</li></ul>`,
@@ -1619,6 +1764,7 @@ let characters = [
     },
     {
         name: "Judge",
+        id:"judge",	
         description: "The Judge can determine whether an execution succeeds or not, regardless of who voted.",
         intro: `<ul><li>The Judge can decide to pardon a player that they think is innocent, to condemn a player that they think is guilty, or vice versa.</li><li>If the nominee is pardoned, then they are not executed today, and none of the votes for them count. If the nominee is condemned, then they are executed immediately, regardless of how many votes they received, and regardless of whether another player was about to die by execution. Then the day ends, because there can normally only be one execution per day.</li><li>The Judge may use their ability during or after the votes are tallied. However, once a new player has been nominated, then the Judge may only use their ability on this new nominee. The Judge may only use their ability once, and only if a different player made a nomination.</li></ul>`,
         ability: 'Once per game, if another player nominated, you may choose to force the current execution to pass or fail.',
@@ -1634,6 +1780,7 @@ let characters = [
     },
     {
         name: "Voudon",
+        id:"voudon",	
         description: "The Voudon lets the dead vote as if they were alive, but prevents alive players from voting.",
         intro: `<ul><li>The dead and the Voudon may vote as many times per day as they wish. They do not need a vote token to vote, and do not lose their vote token when they do so. Alive players cannot
         vote. It is not the case that they may put their hand up but the votes don't count—their hands must stay down during voting.</li><li>The number of votes required to execute a player is no longer half or more of the alive players. The player with the most votes is executed each day, but even a single vote is enough to execute a player if no other player gets more votes.</li><li>The Voudon does not alter who can make nominations. As normal, alive players may make nominations, and dead players may not. Since Travellers are exiled, not executed, all players, alive or dead, may support exiling the Voudon or other Travellers.</li><li>If a player is about to die and then the Voudon is exiled, that player is still about to die and nominations continue, but alive players vote as normal. If a later nomination gets more votes and it tallies to half or more of the alive players, this new player is about to die instead.</li></ul>`,
@@ -1647,6 +1794,7 @@ let characters = [
     },
     {
         name: "Bishop",
+        id:"bishop",	
         description: "The Bishop prevents players from nominating at all. Instead, the Storyteller does all nominating.",
         intro: `<ul><li>The Storyteller makes nominations during the nomination process instead of the players, and the Storyteller may nominate as few or as many players as they wish. To make things fair, they must nominate at least one player whose alignment is opposite the Bishop's alignment each day.</li><li>The Bishop does not alter who can and cannot vote. Each player may do so normally.</li><li>Since Travellers are exiled, not executed, any player may call for the Bishop or another Traveller to be exiled.</li></ul>`,
         ability: 'Only the Storyteller can nominate. At least 1 opposing player must be nominated each day.',
@@ -1659,6 +1807,7 @@ let characters = [
     },
     {
         name: "Barista",
+        id:"barista",	
         description: "The Barista either makes people sober and healthy, or allows them to act twice as much.",
         intro: `<ul><li>The Storyteller chooses which player the Barista affects each night, and which one of the two Barista abilities is in effect. The Barista does not know who or what the Storyteller
         chooses, but the affected player does.</li><li>If the affected player is acting twice, then they do so at the normal time. If they would normally wake at night, they act, go to sleep, then wake to act again. If they have already used a "once per game" ability, they may use that ability again. If they have a "once per game" ability but have not used it yet, they may use it twice before dusk.</li><li>If the Barista makes a player sober and healthy, their drunkenness and poisoning, if any, is removed, and they may not become drunk or poisoned until dusk. This player must get true information, even if a Vortox is in play.</li></ul>`,
@@ -1671,6 +1820,7 @@ let characters = [
     },
     {
         name: "Harlot",
+        id:"harlot",	
         description: "The Harlot learns the character of whoever agrees to reveal it, but at great risk to them both.",
         intro: `<ul><li>Each night, the Harlot chooses a player. That player has a decision to make: do they reveal their character to the Harlot? If they do, the Storyteller may decide that both this player and
         the Harlot die tonight.</li><li>The Harlot only learns the character of the chosen player, not that player's alignment.</li><li>The Harlot may discuss during the day which character they would like to pick at night, and other players may offer to be picked, but they may go back on their word and choose differently when night comes.</li></ul>`,
@@ -1685,6 +1835,7 @@ let characters = [
     },
     {
         name: "Butcher",
+        id:"butcher",	
         description: "The Butcher allows a second execution to occur each day.",
         intro: `<ul><li>After the first executed player has died, the Butcher may nominate a second player for execution. The Butcher may nominate a player that has already been nominated today, and the Butcher may make a nomination even if the Butcher already made a nomination earlier today.</li><li>If a player is executed, even if they do not die, then the Butcher may use their ability. The players may choose to vote or not to vote, so there is no guarantee that this extra nomination will cause an execution—it still needs to get enough votes—but this second nomination does not need to exceed the vote tally of the previous nominations.</li><li>If no execution occurs today, then the Butcher may not use their ability at all today.</li></ul>`,
         ability: 'Each day, after the 1st execution, you may nominate again.',
@@ -1697,6 +1848,7 @@ let characters = [
     },
     {
         name: "Deviant",
+        id:"deviant",	
         description: "The Deviant can avoid being exiled—as long as the Deviant was amusing today.",
         intro: `<ul><li>The Deviant can amuse the group in any way they choose. Generally, verbal means such as jokes, funny stories, or witty remarks will suffice.</li><li>The Storyteller is the judge of whether the Deviant was funny or not.</li></ul>`,
         ability: 'If you were funny today, you cannot die by exile.',
@@ -1709,6 +1861,7 @@ let characters = [
     },
     {
         name: "Bone Collector",
+        id:"bonecollector",	
         description: "The Bone Collector gives dead players their ability back temporarily.",
         intro: `<ul><li>The Bone Collector must choose a dead player. The chosen player remains dead, but they get their ability to use. If their ability was a "you start knowing" or a "once per game" ability—such as the Virgin, Slayer, Clockmaker, Seamstress, or Juggler—they may use it again, even if it was already used,
         until dusk falls.</li><li>When the Bone Collector chooses a player, that player does not learn they were selected by the Bone Collector, although they find out soon enough when they are woken to use their ability.</li><li>If the Bone Collector dies, that player no longer has the ability they regained due to the Bone Collector.</li></ul>`,
@@ -1728,6 +1881,7 @@ let characters = [
     },
     {
         name: "Gangster",
+        id:"gangster",	
         description: "The Gangster encourages their neighbors to kill each other.",
         intro: `<ul><li>The Gangster may kill one of their two living neighbors. Their dead neighbors are skipped over, and do not count.</li><li>To use their ability, the Gangster and one of their living neighbors must agree to kill the other living neighbor. The Storyteller must hear and confirm this agreement. The Gangster cannot kill without the Storyteller present.</li><li>Each day, the Gangster may say whatever they want, and offer any encouraging words they want to either player. Once an agreement has been reached, then the Gangster may not use their ability again today, even if that player didn't die due to an ability protecting them.</li><li>The Gangster's two living neighbors are always one clockwise, and one counter-clockwise.</li><li>If both living neighbors want to kill the other, the Gangster decides who dies.</li></ul>`,
         ability: 'Once per day, you may choose to kill a living neighbor, if your other living neighbor agrees.',
@@ -1739,6 +1893,7 @@ let characters = [
     },
     {
         name: "Gnome",
+        id:"gnome",	
         description: "The Gnome protects one player on their team.",
         intro: `<ul><li>The Gnome starts as the same alignment as one other player - their "amigo". The Storyteller publicly announces which player this is.</li><li>When their amigo is nominated, it is the Gnome's responsibility to speak up. The Storyteller may not prompt them to use their ability.</li><li>If their amigo changes alignment, the Gnome's alignment does not change.</li><li>The Gnome may use their ability any number of times over the course of the game, including zero. Their amigo may still only be nominated once per day.</li><li>When the Gnome uses their ability, and the Storyteller confirms it, the nominator dies immediately. Voting for execution still occurs.</li><li>Regardless of what the group wants, it is always the individual player's decision whether they wish to nominate or not, and always the Gnome player's decision on whether they wish to use their ability or not. If the Storyteller feels that a player is being pressured into nominating or using their ability when they don't want to, the Storyteller may not recognize that nomination or ability use.</li></ul>`,
         ability: 'All players start knowing a player of your alignment. You may choose to kill anyone who nominates them.',
@@ -1750,6 +1905,7 @@ let characters = [
     },
     {
         name: "Doomsayer",
+        id:"",	
         description: "Use the Doomsayer to make large games take less time.",
         intro: `<ul><li>The Doomsayer allows players to sacrifice their allies in order to gain information, which shortens the game.</li><li>Only alive players may use the Doomsayer ability, and each may do so only once per game. It is their responsibility to remember to not use it again.</li><li>If a player says something like "I use the Doomsayer ability," then the Storyteller chooses which player to kill, but they must kill an alive player of the same alignment as the player who used the Doomsayer ability. So, if a good player uses the ability, then a good player dies. If an evil player uses the ability, then an evil player dies.</li><li>Once three players are left alive, the Doomsayer ability may no longer be used.</li></ul>`,
         ability: 'If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies.',
@@ -1761,6 +1917,7 @@ let characters = [
     },
     {
         name: "Toymaker",
+        id:"",	
         description: "Use the Toymaker to make small games take more time.",
         intro: `<ul><li>If you created a character list using the Teensyville option in the Script Tool, then you may want to use the Toymaker. Games set in Teensyville have only six Townsfolk, two Outsiders, two Minions, and one Demon on the list, and they specifically cater to five or six players.</li><li>With the Toymaker in play, the Demon learns three not-inplay characters at the start of the game, and the Minion(s)
         and Demon learn who each other are. Once per game, the Demon must voluntarily choose to attack nobody tonight. If the Demon is about wake to attack a player and this would end the game, but the Demon has not yet chosen to attack nobody, then the Storyteller does not wake the Demon—they are forced to attack nobody tonight.</li><li>You may use the Toymaker in games of TROUBLE BREWING with five or six players, but it is not necessary.</li></ul>`,
@@ -1774,6 +1931,7 @@ let characters = [
     },
     {
         name: "Angel",
+        id:"",	
         description: "Use the Angel to help new players have fun when there are one or two new players in a group of veterans.",
         intro: `<ul><li>Being the only new player in a group can be overwhelming. Being protected by the Angel encourages all players to keep new players alive for as long as possible, which means new players have more fun and contribute to the game more.</li><li>All players know who is protected by the Angel, but not
         their alignment or character. Whoever is the single player most responsible for killing a protected player suffers some consequence. For example, if the Demon kills a protected player, the Demon suffers a penalty. If a protected player is executed, the player who suffers a penalty will probably be the one who nominated the protected player.</li></ul>`,
@@ -1788,6 +1946,7 @@ let characters = [
     },
     {
         name: "Buddhist",
+        id:"",	
         description: "Use the Buddhist to help new players have fun when there are one or two veterans in a group of new players.",
         intro: `<ul><li>When experienced players find themselves in a game full of beginners, the veterans will often dominate the game due to their enthusiasm and knowledge.</li><li>Players affected by the Buddhist cannot talk at all for the first two minutes of each day. They may not whisper in private, and may not talk to each other. They simply listen.</li><li>This is <i>not</i> a punishment for being talkative. Being talkative is great! BLOOD ON THE CLOCKTOWER is a talking game, and the more, the merrier. That said, forcing the veterans to stay silent temporarily each day allows the new players to find their
         own voices, to come up with their own theories, and to take action on their own. It is about fun for everybody.</li><li>It is common for a player to say "I am a Buddhist" or for the Storyteller to say to them "You are a Buddhist." This doesn't mean that their character is the Buddhist. It is a pleasant
@@ -1803,6 +1962,7 @@ let characters = [
     },
     {
         name: "Revolutionary",
+        id:"",	
         description: "Use the Revolutionary to help disadvantaged players participate.",
         intro: `<ul><li>If a player has an intellectual disability, is unable to understand the rules of the game, is blind or deaf, or is unable to communicate or participate as normal, they may still play by
         teaming up with a player that they trust.</li><li>These two players are the same alignment and sit next to each other so they can whisper or signal to each other throughout the game. The experienced player can help the disadvantaged player in whatever way is needed, talking on their behalf or suggesting what to do.</li><li>The Revolutionary is also useful for couples or good friends who wish to play, but are uncomfortable with lying to or mistrusting each other, even in a game.</li><li>Once per game, the Storyteller can make either player register as a different character, alignment, or both.</li><li>The Storyteller may wake both players at night, instead of just the player due to wake, if that helps understanding.</li><li>If an ability would change a Revolutionary's alignment, this ability has no effect or it changes both Revolutionaries' alignment, Storyteller's choice.</li></ul>`,
@@ -1818,6 +1978,7 @@ let characters = [
     },
     {
         name: "Hell's Librarian",
+        id:"",	
         description: "Use the Hell's Librarian to help a soft-spoken Storyteller participate.",
         intro: `<ul><li>As the Storyteller, you'll find the Hell's Librarian useful when it is difficult to get the group's attention. Maybe you need to explain a game rule? Or get attention for a crucial final-day
         vote? It can also be used to prevent players from talking about their characters before the game begins or from narrating what they are doing at night. Players instinctively stay quieter during the pre-game period and at night, so you may never need it.</li><li>It is best to give the players fair warning before you bring the hammer down. Like the Angel, the threat of a mysterious penalty is more important than the actual penalty. The purpose of this character is to make games run smoothly, not to punish minor infringements.</li></ul>`,
@@ -1832,6 +1993,7 @@ let characters = [
     },
     {
         name: "Fiddler",
+        id:"",	
         description: "Use the Fiddler to decide a winner if the game must end due to time constraints or a stalemate.",
         intro: `<ul><li>Sometimes there won't be enough time to finish a game. Maybe the venue you are playing at needs to close. Maybe some players need to leave unexpectedly and the game cannot continue without them. Maybe the Townsfolk refuse to execute and the Demon refuses to kill.</li><li>The Storyteller can add and activate the Fiddler at any time. To do so, all players close their eyes while the Demon chooses a good player to challenge to a fiddle contest. Then, after a minute or two, all players will raise their hands to vote on which of these two players wins. The game ends, and the winning player's entire team wins too.</li><li>Like an exile, this group decision on who wins the game is not affected by abilities, and the dead may vote normally. The Thief cannot steal votes, the Voudon has no effect, and so on.</li><li>Players cannot use their abilities once the Fiddler has been activated. The Slayer cannot choose to slay a player, the Artist cannot ask their question, and so on.</li><li>If this fiddle contest is a tie, evil wins.</li></ul>`,
         ability: 'Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win.',
@@ -1844,6 +2006,7 @@ let characters = [
     },
     {
         name: "Fibbin",
+        id:"",	
         description: "Add the Fibbin if your script has too much information or no possibility of misinformation.",
         intro: `<ul><li>If you create a character list and it has no characters that cause drunkenness, poisoning, or other ways for information to be false, then you may want to add the Fibbin. Whilst it is not necessary, even a minor chance of a good player's information being incorrect can drastically help the evil players bluff.</li><li>The Fibbin does not make an ability fail in the way that drunkenness and poisoning do. It only affects abilities that provide information from the Storyteller signaling to a player during the night or telling them something.</li><li>If the game ends before you have given a good player incorrect information, that's okay.</li><li>Some characters get false information due to their ability. The Fibbin can make this information true.</li></ul>`,
         ability: 'Once per game, 1 good player might get incorrect information.',
@@ -1856,6 +2019,7 @@ let characters = [
     },
     {
         name: "Duchess",
+        id:"",	
         description: "Add the Duchess if your script has too little information or too much misinformation.",
         intro: `<ul><li>Sometimes, you may want to create a character list using the Script Tool that has hardly any good characters that gain information directly. Whilst having an abundance of abilities and a lack of information can be fun for some players, other players like something more. The Duchess adds regular
         information to such a game.</li><li>Each player that visits the Duchess learns how many visitors are evil, including themself. However, one visitor of the Storyteller's choice will get false information.</li><li>Players that visit the Duchess still get to use their ability normally. The Duchess does not make their ability give false information.</li><li>The players decide amongst themselves which players will be
@@ -1871,6 +2035,7 @@ let characters = [
     },
     {
         name: "Sentinel",
+        id:"",	
         description: "Add the Sentinel to your script to keep the number of Outsiders in play mysterious.",
         intro: `<ul><li>The official character lists are carefully constructed so that the number of Outsiders is never completely known, which lets evil players safely bluff as Outsiders. Many of the games you create using the Script Tool will not have this luxury. If, for one reason or another, the number of Outsiders in a game will become certain, the Storyteller can add a Sentinel. This will confuse matters and help the evil team either bluff as Outsiders or make existing Outsiders look suspicious.</li><li>Games with a Sentinel in play might have one more Outsider than normal. They may have one less. They may have the
         normal amount. It is up to the Storyteller.</li></ul>`,
@@ -1885,6 +2050,7 @@ let characters = [
     },
     {
         name: "Spirit Of Ivory",
+        id:"",	
         description: "Add the Spirit of Ivory to your script to keep the number of evil players fair and balanced.",
         intro: `<ul><li>When creating character lists using the Script Tool, it is a good idea to include no more than one character that adds evil characters. If two or more players turn evil, then the evil team can win simply by revealing who they are and winning due to their voting majority. Adding the Spirit of Ivory prevents too many players turning evil, creating a more fun and fair game for the good players.</li><li>With a Spirit of Ivory in play, only one more player than normal can ever be evil. If a second player would become evil, they stay good instead.</li><li>The normal number of evil players is printed on the Traveller sheet and on the Setup sheet.</li></ul>`,
         ability: 'There can\'t be more than 1 extra evil player.',
@@ -1897,6 +2063,7 @@ let characters = [
     },
     {
         name: "Storm Catcher",
+        id:"",	
         description: "Use the Storm Catcher to focus the game on a particular good character.",
         intro: `<ul><li>If you want to construct a script based around the actions or information of one particular good character, if you want to have this character in every game <i>(or at least have an evil player bluffing as this character)</i>, you can use the Storm Catcher. Your chosen character will play a big part in the game, will be the focus of a lot of group discussion, and will probably live until the final day.</li><li>The Storyteller declares that one character can't die, unless by execution. This character may be in play, or not in play. If it is in play, this good player lives as long as the good players want them to, since evil players cannot kill them. If it is not in play, all evil players learn this, so any evil player can easily bluff as this character. <i>(They don't have to, but they can.)</i></li></ul>`,
         ability: 'Name a good character. If in play, they can only die by execution, but evil players learn which player it is.',
@@ -1908,6 +2075,7 @@ let characters = [
     },
     {
         name: "Djinn",
+        id:"",	
         description: "Add the Djinn to all games with a jinx icon on the script. The Djinn resolves jinxes by creating a unique rule.",
         intro: `<ul><li>When creating a character list using the Script Tool, some character combinations will be marked as unusual. These two characters are jinxed—they have abilities that clash or contradict each other in some way. The Djinn creates a special rule that allows these characters to work well together.
         Some jinxed characters even work better with the Djinn in play!</li><li>The Djinn's special rule is described by the Script Tool online, and is printed out automatically when you create a script with
@@ -1923,6 +2091,7 @@ let characters = [
     },
     {
         name: "Gardener",
+        id:"",	
         description: "Use the Gardener to assign characters to particular players.",
         intro: `<ul><li>After the ST has put the Gardener into play, they can manually assign and edit which characters are going to be given to which seated players before sending them out.</li><li>If a player has an issue with a particular character, you may use the Gardener to affect setup so that player doesn't draw the relevant token.</li><li>The Gardener can also be useful if a particular player has drawn evil many times over a single session of playing Clocktower.</li><li>The Gardener is designed for use in the official app only.</li></ul>`,
         ability: "The Storyteller assigns 1 or more players' characters.",
@@ -1934,6 +2103,7 @@ let characters = [
     },
     {
         name: "Bootlegger",
+        id:"",	
         description: "Add the Bootlegger to include homebrew characters or rules.",
         intro: `<ul><li>The Bootlegger allows Storytellers to use characters they, or others, have created that are not official characters or allows them to use non-standard rules in the game.</li><li>If there are homebrew characters on the character sheet, or homebrew rules in effect, the Storyteller tells all players what they are before play begins.</li><li>The Bootlegger allows for multiple characters or rules to be in effect at once.</li><li>As long as there is at least one homebrew character on the current script, this Fabled will be in play and can only be removed by switching to a script that does not contain any homebrew characters.</li><li>The Bootlegger is designed for use in the official app only.</li><li>Bootlegger, despite many claims to the contrary, defeated Homebrewy McHomebrewface, "the people's choice", in a hotly contested poll to decide the Fabled's name.</li></ul>`,
         ability: 'This script has homebrew characters or rules.',
@@ -1945,6 +2115,7 @@ let characters = [
     },
     {
         name: "Deus Ex Fiasco",
+        id:"",	
         description: "Use the Deus ex Fiasco to neutralize mistakes and increase your confidence when running a difficult script.",
         intro: `<ul><li>The Deus ex Fiasco must be announced at the start of the game. It may never be added partway through the game. Hypothetically, if the Storyteller makes a mistake mid-game, and adds the Deus ex Fiasco afterwards, all players would know that the mistake was real and the Deus ex Fiasco would not work.</li><li>The Storyteller must make a mistake. This can be an accidental mistake, or a deliberate mistake. The players are not told which.</li><li>If the Storyteller has made an accidental mistake, they do not have to make additional mistakes. If the game is approaching the final day and the Storyteller has not made an accidental mistake, they must make a deliberate mistake before the game ends.</li><li>All mistakes, whether deliberate or accidental, must be corrected. The Storyteller may need to break the rules in order to fix a mistake. Any time after a mistake is made, the Storyteller must inform the group that a mistake has been made and corrected. The exact nature of the mistake is not revealed to the group, but may need to be revealed to an affected player in private.</li><li>Players are welcome to bluff that the Storyteller has made a mistake when they haven't, or to bluff that a mistake was corrected when it wasn't.</li><li>If needed, the Storyteller may make several accidental mistakes, several deliberate mistakes, or some combination of the two.</li></ul>`,
         ability: 'At least once per game, the Storyteller will make a mistake, correct it, and publicly admit to it.',
@@ -1956,6 +2127,7 @@ let characters = [
     },
     {
         name: "Ferryman",
+        id:"",	
         description: "Use the Ferryman to create a fun and inclusive climax to the game even if new players have used their vote tokens.",
         intro: `<ul><li>If you are running a game for newer players who don't yet grasp the strategy of when to use their dead votes, or have used them when they forgot they were dead, you can add the Ferryman. This will ensure everyone gets a say in the final day's critical votes.</li><li>All dead players regain their vote tokens on the final day, regardless of alignment or when they voted.</li><li>If a dead player still has their vote token, they do not get a second one from the Ferryman.</li><li>The final day is the day that the Storyteller thinks is most likely to be the last day of the game - the day where, if the Demon is not executed, evil will win. This most likely means the day with only 3 living players remaining.</li><li>If vote tokens are used on the final day, they aren't returned.</li></ul>`,
         ability: 'On the final day, all dead players regain their vote token.',
@@ -2604,9 +2776,12 @@ let altName;
 let name;
 
 initialize();
-function initialize() {
+
+async function initialize() {
+    closeModal(); 
     setHeaderHeight();
-    populateAll();
+    populateAll();           // riempie TB di default (quello attuale)
+    setupDynamicScripts();   // attiva menu + load
 }
 
 function setHeaderHeight() {
@@ -2654,6 +2829,135 @@ function populateAll() {
         populateRest(name, originalName, group);
     })
 
+}
+
+const SCRIPTS_MANIFEST_URL = "./scripts/manifest.json";
+const SCRIPTS_BASE_PATH = "./scripts/";
+
+let scriptsIndex = []; // [{ file, name }]
+
+function buildCharacterIndex() {
+    const index = new Map();
+    characters.forEach(c => {
+        if (c.id) index.set(c.id, c);
+    });
+    return index;
+}
+
+async function setupDynamicScripts() {
+    // 1) click delegation (così i token aggiunti dopo funzionano)
+    bindTokenClicksDelegated();
+
+    // 2) carica manifest + popola select
+    await loadScriptsManifestAndPopulateSelect();
+
+    // 3) bottone Load
+    $("#loadScriptBtn").on("click", onLoadScriptClicked);
+}
+
+function bindTokenClicksDelegated() {
+    // rimuove eventuali handler vecchi (sicurezza)
+    $(document).off("click.dynamicToken");
+
+    // SOLO token dentro la lista (evita il token dentro il modal che ha anche class "token")
+    $(document).on("click.dynamicToken", ".all .script img.token", function () {
+        openModal();
+
+        resetModal();
+
+        originalName = $(this).attr("data-name");
+        altName = originalName;
+
+        getCharacterInformation(originalName);
+        updateName();
+        colorText(group);
+
+        populateModal(name, altName, intro, ability, flavor, examples, howToRun, originalName);
+    });
+
+
+}
+
+async function loadScriptsManifestAndPopulateSelect() {
+    const select = $("#scriptSelect");
+    select.empty();
+
+    let files;
+    try {
+        files = await fetchJson("./scripts/manifest.json");
+    } catch (e) {
+        console.error("Impossibile caricare manifest:", e);
+        select.append(`<option value="">(manifest mancante)</option>`);
+        return;
+    }
+
+    scriptsIndex = [];
+
+    for (const file of files) {
+        try {
+            const data = await fetchJson(SCRIPTS_BASE_PATH + file);
+            const meta = data.find(x => typeof x === "object" && x && x.id === "_meta");
+            const name = meta?.name || file;
+            scriptsIndex.push({ file, name });
+        } catch (e) {
+            console.warn("Script non leggibile:", file, e);
+        }
+    }
+
+    // ordina per nome
+    scriptsIndex.sort((a, b) => a.name.localeCompare(b.name));
+
+    // opzione placeholder
+    select.append(`<option value="">Seleziona uno script…</option>`);
+
+    scriptsIndex.forEach(s => {
+        select.append(`<option value="${s.file}">${s.name}</option>`);
+    });
+}
+
+async function onLoadScriptClicked() {
+    const file = $("#scriptSelect").val();
+    if (!file) return;
+
+    let data;
+    try {
+        data = await fetchJson(SCRIPTS_BASE_PATH + file);
+    } catch (e) {
+        console.error("Impossibile caricare lo script:", file, e);
+        return;
+    }
+
+    const meta = data.find(x => typeof x === "object" && x && x.id === "_meta");
+    const roleIds = data.filter(x => typeof x === "string");
+
+    const characterIndex = buildCharacterIndex();
+
+    // svuota TB
+    $(".js_tb-townsfolk, .js_tb-outsiders, .js_tb-minions, .js_tb-demons").empty();
+
+    // popola TB dal json
+    roleIds.forEach(id => {
+        const character = characterIndex.get(id);
+        if (!character) {
+            console.warn("ID ruolo non trovato in characters:", id);
+            return;
+        }
+        const originalName = character.name;
+        const name = getName(originalName);
+        const group = character.group;
+        populateTB(name, originalName, group); // già esiste :contentReference[oaicite:3]{index=3}
+    });
+
+    // opzionale: cambia il titolo “Trouble Brewing” col nome script caricato
+    if (meta?.name) {
+        $("#trouble-brewing").text(meta.name);
+    }
+}
+
+async function fetchJson(url) {
+    const res = await fetch(url, { cache: "no-cache" });
+    if (!res.ok) throw new Error(`HTTP ${res.status} su ${url}`);
+    return await res.json();
 }
 
 function getName(originalName, name) {
@@ -2745,9 +3049,10 @@ function populateFabled(name, originalName) {
     $(".js_fabled-all").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
 }
 
-$('.token').click(function(){
-    openModal();
-});
+
+//$('.token').click(function(){
+//    openModal();
+//});
 
 function openModal() {
     modal.style.display = "block";
@@ -2776,6 +3081,7 @@ function closeModal() {
     isModalOpen = false;
 }
 
+/*
 $(".all .token").click(function() {
 
     resetModal();
@@ -2791,7 +3097,7 @@ $(".all .token").click(function() {
 
     populateModal(name, altName, intro, ability, flavor, examples, howToRun, originalName);
 });
-
+*/
 function resetModal() {
     //resets modal position
     setTimeout( () => {
@@ -2950,6 +3256,3 @@ function setJinxes(originalName, name) {
         $(".js_jinx-container").addClass("d-none");
     }
 }
-
-
-
