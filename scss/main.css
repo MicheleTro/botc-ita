@@ -281,7 +281,7 @@ h3 {
   color: white;
   text-align: center;
   margin: 0;
-  padding: 30px;
+  padding: 0px;
 }
 .script__character-type--good {
   background-color: var(--good-blue);
@@ -311,7 +311,7 @@ h3 {
   justify-content: center;
   flex-wrap: wrap;
   max-width: 1000px;
-  padding: 15px;
+  padding: 0px;
 }
 .script__characters-container--good {
   border: 2px solid var(--good-blue);
@@ -511,8 +511,8 @@ h3 {
 }
 @media only screen and (max-width: 573px) {
   .all .token {
-    max-width: 100px;
-    margin: 7.5px;
+    max-width: 95px;
+    margin: 0px;
   }
 }
 .all .token:hover {
@@ -552,4 +552,3 @@ h3 {
   color: var(--purple);
 }
 
-/* END OTHER *//*# sourceMappingURL=main.css.map */

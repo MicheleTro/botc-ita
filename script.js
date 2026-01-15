@@ -3070,42 +3070,6 @@ function populateRest(name, originalName, group) {
     }
 }
 
-function populatedBMR(name, originalName, group) {
-    if (group == "Townsfolk") {
-        $(".js_bmr-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
-    } else if (group == "Outsider") {
-        $(".js_bmr-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
-    } else if (group == "Minion") {
-        $(".js_bmr-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`)
-    } else if (group == "Demon") {
-        $(".js_bmr-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
-    }
-}
-
-function populateSV(name, originalName, group) {
-    if (group == "Townsfolk") {
-        $(".js_sv-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
-    } else if (group == "Outsider") {
-        $(".js_sv-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
-    } else if (group == "Minion") {
-        $(".js_sv-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`)
-    } else if (group == "Demon") {
-        $(".js_sv-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
-    }
-}
-
-function populateEXP(name, originalName, group) {
-    if (group == "Townsfolk") {
-        $(".js_exp-townsfolk").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
-    } else if (group == "Outsider") {
-        $(".js_exp-outsiders").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
-    } else if (group == "Minion") {
-        $(".js_exp-minions").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`)
-    } else if (group == "Demon") {
-        $(".js_exp-demons").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
-    }
-}
-
 function populateTraveller(name, originalName, script) {
     if (script == "tb") {
         $(".js_trav-tb").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
@@ -3121,11 +3085,6 @@ function populateTraveller(name, originalName, script) {
 function populateFabled(name, originalName) {
     $(".js_fabled-all").append(`<img class="token" loading="lazy" src="./img/${name}.png" data-name="${originalName}" alt="${originalName}">`);
 }
-
-
-//$('.token').click(function(){
-//    openModal();
-//});
 
 function openModal() {
     modal.style.display = "block";
@@ -3154,23 +3113,6 @@ function closeModal() {
     isModalOpen = false;
 }
 
-/*
-$(".all .token").click(function() {
-
-    resetModal();
-
-    originalName = $(this).attr("data-name");
-    altName = originalName;
-
-    getCharacterInformation(originalName);
-
-    updateName();
-
-    colorText(group);
-
-    populateModal(name, altName, intro, ability, flavor, examples, howToRun, originalName);
-});
-*/
 function resetModal() {
     //resets modal position
     setTimeout( () => {
