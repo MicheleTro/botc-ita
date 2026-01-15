@@ -552,3 +552,90 @@ h3 {
   color: var(--purple);
 }
 
+/* ===== Help icon + modal (botcscripts link) ===== */
+
+.intro__text--with-help {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.help-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--purple);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--purple);
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  padding: 0;
+}
+
+.help-icon:hover {
+  filter: brightness(0.95);
+}
+
+.help-icon:active {
+  transform: translateY(1px);
+}
+
+.help-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.help-modal.is-open {
+  display: block;
+}
+
+.help-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.help-modal__content {
+  position: relative;
+  max-width: min(900px, 92vw);
+  max-height: 92vh;
+
+  margin: 4vh auto 0;
+  background: var(--modal-background);
+  border: 2px solid var(--purple);
+  border-radius: 12px;
+  padding: 14px;
+
+  overflow: auto;
+}
+
+.help-modal__close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+
+  background: transparent;
+  border: none;
+  color: var(--purple);
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.help-modal__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

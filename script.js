@@ -2856,6 +2856,7 @@ async function setupDynamicScripts() {
 
     $("#loadScriptUrlBtn").on("click", onLoadScriptUrlClicked);
 
+    setupHelpModal();
 }
 
 function bindTokenClicksDelegated() {
@@ -3270,4 +3271,37 @@ function setJinxes(originalName, name) {
     } else {
         $(".js_jinx-container").addClass("d-none");
     }
+}
+
+function setupHelpModal() {
+  const btn = document.getElementById("botcLinkHelpBtn");
+  const modal = document.getElementById("botcLinkHelpModal");
+  if (!btn || !modal) return;
+
+  const open = () => {
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  };
+
+  const close = () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  };
+
+  btn.addEventListener("click", open);
+
+  // chiudi cliccando su backdrop o X (elementi con data-close)
+  modal.addEventListener("click", (e) => {
+    const target = e.target;
+    if (target && target.getAttribute && target.getAttribute("data-close") === "1") {
+      close();
+    }
+  });
+
+  // chiudi con ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-open")) close();
+  });
 }
